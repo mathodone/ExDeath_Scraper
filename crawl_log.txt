@@ -1,0 +1,10 @@
+[5/7/2019 2:11:58 PM]    Starting Crawl                          https://www.icademy.com/
+[5/7/2019 2:11:59 PM]    Queued Link                             /contact/request-more-information.html
+[5/7/2019 2:11:59 PM]    Queued Link                             /about/welcome-our-head-school.html
+[5/7/2019 2:11:59 PM]    Queued Link                             /about/school-leaders-and-teachers.html
+[5/7/2019 2:11:59 PM]    Queued Link                             /about/meet-our-families.html
+[5/7/2019 2:11:59 PM]    Queued Link                             /academics/curriculum.html
+[5/7/2019 2:11:59 PM]    Queued Link                             /parent-resources.html
+[5/7/2019 2:11:59 PM]    Queued Link                             /parent-resources/HolidayCalendar.html
+[5/7/2019 2:11:59 PM]    Queued Link                             /contact.html
+[5/7/2019 2:11:59 PM]    Generated Queue                         https://www.icademy.com/
