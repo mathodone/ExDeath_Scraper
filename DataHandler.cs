@@ -11,6 +11,7 @@ namespace ExDeath
 {
     class DataHandler
     {
+        // reads a csv file into memory
         public static DataTable ReadCsv(string path)
         {
             StreamReader sr = new StreamReader(path, System.Text.Encoding.UTF7);
