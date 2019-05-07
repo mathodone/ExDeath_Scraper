@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crawler.cs" />
     <Compile Include="DataHandler.cs" />
     <Compile Include="Logging.cs" />
     <Compile Include="Program.cs" />
