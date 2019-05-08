@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace ExDeath
@@ -44,6 +40,11 @@ namespace ExDeath
             WriteToLog("Queued Link", url);
         }
 
+        public static void ProcessingNewPage(string url)
+        {
+            WriteToLog("Processing new page", url);
+        }
+
         public static void ProcessedQueue()
         {
             WriteToLog("Finished Processing Queue", "");
@@ -54,14 +55,14 @@ namespace ExDeath
             WriteToLog("Finished Processing Link", url);
         }
 
+        public static void CrawlFinished(string url)
+        {
+            WriteToLog("Crawl Finished", url);
+        }
+
         public static void FoundURL(string url)
         {
             WriteToLog("Grabbed URL from page", url);
-        }
-
-        public static void LoadingNewPage(string url)
-        {
-            WriteToLog("Loading new page", url);
         }
 
         public static void LoadSuccess(string url)
