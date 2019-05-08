@@ -11,7 +11,7 @@ namespace ExDeath
         static Logging()
         {
             file = "crawl_log.txt";
-            path = "../../";
+            path = "../../logs/";
         }
 
         public static void WriteToLog(string entry, string url = "")
@@ -35,12 +35,12 @@ namespace ExDeath
             WriteToLog("Generated Queue", url);
         }
 
-        public static void QueuedLink(string url)
+        public static void QueuedUrl(string url)
         {
             WriteToLog("Queued Link", url);
         }
 
-        public static void ProcessingNewPage(string url)
+        public static void ProcessingNewUrl(string url)
         {
             WriteToLog("Processing new page", url);
         }
@@ -50,49 +50,29 @@ namespace ExDeath
             WriteToLog("Finished Processing Queue", "");
         }
 
-        public static void ProcessedLink(string url)
+        public static void ProcessedUrl(string url)
         {
             WriteToLog("Finished Processing Link", url);
         }
 
-        public static void CrawlFinished(string url)
+        public static void FailedUrl(string url)
         {
-            WriteToLog("Crawl Finished", url);
+            WriteToLog("Failed to process url", url);
         }
 
-        public static void FoundURL(string url)
+        public static void DownloadedImage(string filename)
         {
-            WriteToLog("Grabbed URL from page", url);
-        }
-
-        public static void LoadSuccess(string url)
-        {
-            WriteToLog("Page load successful", url);
-        }
-
-        public static void SkippedThisQueuedURL(string url)
-        {
-            WriteToLog("Skipping...URL already queued", url);
-        }
-
-        public static void SkippedThisExcludedURL(string url)
-        {
-            WriteToLog("Skipping...URL domain is excluded", url);
-        }
-
-        public static void SkippedThisExcludedFileType(string url)
-        {
-            WriteToLog("Skipping...file type is excluded", url);
-        }
-
-        public static void EngueuedURL(string url)
-        {
-            WriteToLog("Queuing", url);
+            WriteToLog("Downloaded Image", filename);
         }
 
         public static void DownloadedFile(string filename)
         {
             WriteToLog("Downloaded", filename);
+        }
+
+        public static void CrawlFinished(string url)
+        {
+            WriteToLog("Crawl Finished", url);
         }
     }
 }
