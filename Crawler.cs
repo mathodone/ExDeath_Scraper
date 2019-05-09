@@ -52,7 +52,7 @@ namespace ExDeath
         
         // gets a list of links from a page and adds them
         // to the crawlQueue
-        public async Task<bool> GenerateQueue()
+        public async Task<bool> GenerateQueueAsync()
         {
             try
             {
@@ -72,41 +72,25 @@ namespace ExDeath
                                             .Select(a => a.Attributes["href"].Value)
                                             .ToList();
 
-                if (useKeywords)
+                foreach (string link in pageLinks)
                 {
-                    foreach (string link in pageLinks)
+                    // turn relative paths to absolute
+                    string fixedlink = link.StartsWith("/") ? $"{uri.Scheme}://{uri.Host}/{link.Substring(1)}" : link;
+
+                    if (!crawlQueue.Contains(fixedlink))
                     {
-                        // check if link has any keywords in it
-                        if (link.Split(urlSplit).Intersect(keywords).Any())
+                        if (useKeywords)
                         {
-                            // no dupes allowed
-                            if (!crawlQueue.Contains(link))
+                            if (fixedlink.Split(urlSplit).Intersect(keywords).Any())
                             {
-                                // change relative path to absolute
-                                // the substring(1) is to remove the "/" from
-                                // beginning of relative paths 
-                                if (link.StartsWith("/"))
-                                {
-                                    crawlQueue.Enqueue($"{uri.Scheme}://{uri.Host}/{link.Substring(1)}");
-                                    Logging.QueuedUrl ($"{uri.Scheme}://{uri.Host}/{link.Substring(1)}");
-                                }
-                                else
-                                {
-                                    crawlQueue.Enqueue(link);
-                                    Logging.QueuedUrl(link);
-                                }
+                                crawlQueue.Enqueue(fixedlink);
+                                Logging.QueuedUrl(fixedlink);
                             }
                         }
-                    }
-                }
-                else
-                {
-                    foreach (string link in pageLinks)
-                    {
-                        if (!crawlQueue.Contains(link))
+                        else
                         {
-                            crawlQueue.Enqueue(link);
-                            Logging.QueuedUrl(link);
+                            crawlQueue.Enqueue(fixedlink);
+                            Logging.QueuedUrl(fixedlink);
                         }
                     }
                 }
@@ -116,6 +100,7 @@ namespace ExDeath
             catch (HttpRequestException e)
             {
                 Console.WriteLine("Exception: ", e);
+                Logging.FailedQueue(uri.ToString());
             }
 
             return true;
@@ -124,25 +109,30 @@ namespace ExDeath
         // visit a url and get the source html, then save the html to a file
         // the reason we save html to a file is because we can process the html
         // offline much more quickly
-        public async Task<bool> ProcessUrl(string url, bool saveImages = false)
+        public async Task<bool> ProcessUrlAsync(string url, bool saveImages = false)
         {
             Logging.ProcessingNewUrl(url);
-            string path = new Uri(url).LocalPath.Substring(1);
 
             try
             {
+                string path = new Uri(url).LocalPath.Substring(1);
+                DirectoryInfo di = Directory.CreateDirectory($"{downloadsDirectory}/{path}/");
+
                 HttpResponseMessage response = await client.GetAsync(uri);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
-                DirectoryInfo di = Directory.CreateDirectory($"{downloadsDirectory}/{path}/");
-                File.WriteAllText($"{downloadsDirectory}/{path}/{path}_html.txt", responseBody);
-                    
-                if (saveImages)
+
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine($"{downloadsDirectory}/{path}/", $"{path}_html.txt")))
                 {
-                    DownloadImages(responseBody);
-                    HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
-                    htmlDoc.LoadHtml(responseBody);
+                    await outputFile.WriteAsync(responseBody);
                 }
+
+                //if (saveImages)
+                //{
+                //    DownloadImages(responseBody);
+                //    HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
+                //    htmlDoc.LoadHtml(responseBody);
+                //}
 
                 Logging.ProcessedUrl(url);
 
@@ -185,19 +175,18 @@ namespace ExDeath
 
             var result = new List<string>();
 
-            runningTasks.Add(GenerateQueue());
-            result.Add(uri.ToString());
+            runningTasks.Add(GenerateQueueAsync());
 
             while (runningTasks.Any())
             {
                 var firstCompletedTask = await Task.WhenAny(runningTasks);
                 runningTasks.Remove(firstCompletedTask);
-                
+
                 // if we still have pages to crawl and connections available
                 while (crawlQueue.Any() && runningTasks.Count < ServicePointManager.DefaultConnectionLimit)
                 {
                     var url = crawlQueue.Dequeue();
-                    runningTasks.Add(ProcessUrl(url));
+                    runningTasks.Add(ProcessUrlAsync(url));
                 }
             }
 

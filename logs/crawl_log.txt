@@ -1,154 +1,176 @@
-[5/7/2019 7:56:18 PM]    Starting Crawl                          http://www.chinavitae.org/biography_browse.php?l=A
-[5/7/2019 7:56:19 PM]    Queued Link                             /index.php
-[5/7/2019 7:56:19 PM]    Queued Link                             /research/
-[5/7/2019 7:56:19 PM]    Queued Link                             /library/
-[5/7/2019 7:56:19 PM]    Queued Link                             /vip/
-[5/7/2019 7:56:19 PM]    Queued Link                             /new/
-[5/7/2019 7:56:19 PM]    Queued Link                             /newsletter/
-[5/7/2019 7:56:19 PM]    Queued Link                             /aboutus.php
-[5/7/2019 7:56:19 PM]    Queued Link                             /faq.php
-[5/7/2019 7:56:19 PM]    Queued Link                             /contactus.php
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=A
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=B
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=C
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=D
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=E
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=F
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=G
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=H
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=I
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=J
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=K
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=L
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=M
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=N
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=O
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=P
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=Q
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=R
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=S
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=T
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=U
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=V
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=W
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=X
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=Y
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?l=Z
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Abdul_Abdulrixit
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Abdurehim_Amet
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Abudukader_Naisierding
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Abudureyimu_Ajiyiming
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Agya_Losangtudain
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Ai_Baojun
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Ai_Guoxiang
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Ai_Husheng
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Ai_Lihua
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Ai_Pishan
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Ai_Zhisheng
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Alice Cheung_Wing-chun|888
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Aman_Haji
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Amudun_Niyaz
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Jian
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Limin
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Min
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Pingsheng
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Qiyuan
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Zhaoqing
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Zhendong
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Zhisheng
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Zhiwen
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Zijie
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/An_Ziwen
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Anwar_Amut
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Arken_Imirbaki
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Aronhan'aji_|2313
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Ashanbaike_Turdi
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography/Ashat_Kerimbay
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?clear=all
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?clear=bios
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?clear=vips
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?clear=insts
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?clear=locs
-[5/7/2019 7:56:19 PM]    Queued Link                             /biography_browse.php?clear=searches
-[5/7/2019 7:56:19 PM]    Queued Link                             /privacy.php
-[5/7/2019 7:56:19 PM]    Queued Link                             /donations.php
-[5/7/2019 7:56:19 PM]    Queued Link                             http://twitter.com/chinavitae
-[5/7/2019 7:56:19 PM]    Queued Link                             /rss/index.php
-[5/7/2019 7:56:19 PM]    Generated Queue                         http://www.chinavitae.org/biography_browse.php?l=A
-[5/7/2019 7:56:19 PM]    Processing new page                     /index.php
-[5/7/2019 7:56:19 PM]    Processing new page                     /research/
-[5/7/2019 7:56:19 PM]    Processing new page                     /library/
-[5/7/2019 7:56:19 PM]    Processing new page                     /vip/
-[5/7/2019 7:56:19 PM]    Processing new page                     /new/
-[5/7/2019 7:56:19 PM]    Processing new page                     /newsletter/
-[5/7/2019 7:56:19 PM]    Processing new page                     /aboutus.php
-[5/7/2019 7:56:19 PM]    Processing new page                     /faq.php
-[5/7/2019 7:56:19 PM]    Processing new page                     /contactus.php
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=A
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=B
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=C
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=D
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=E
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=F
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=G
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=H
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=I
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=J
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=K
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=L
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=M
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=N
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=O
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=P
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=Q
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=R
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=S
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=T
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=U
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=V
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=W
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=X
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=Y
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?l=Z
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Abdul_Abdulrixit
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Abdurehim_Amet
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Abudukader_Naisierding
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Abudureyimu_Ajiyiming
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Agya_Losangtudain
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Ai_Baojun
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Ai_Guoxiang
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Ai_Husheng
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Ai_Lihua
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Ai_Pishan
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Ai_Zhisheng
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Alice Cheung_Wing-chun|888
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Aman_Haji
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Amudun_Niyaz
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Jian
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Limin
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Min
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Pingsheng
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Qiyuan
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Zhaoqing
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Zhendong
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Zhisheng
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Zhiwen
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Zijie
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/An_Ziwen
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Anwar_Amut
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Arken_Imirbaki
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Aronhan'aji_|2313
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Ashanbaike_Turdi
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography/Ashat_Kerimbay
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?clear=all
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?clear=bios
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?clear=vips
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?clear=insts
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?clear=locs
-[5/7/2019 7:56:19 PM]    Processing new page                     /biography_browse.php?clear=searches
-[5/7/2019 7:56:19 PM]    Processing new page                     /privacy.php
-[5/7/2019 7:56:19 PM]    Processing new page                     /donations.php
-[5/7/2019 7:56:19 PM]    Processing new page                     http://twitter.com/chinavitae
-[5/7/2019 7:56:19 PM]    Processing new page                     /rss/index.php
-[5/7/2019 7:56:19 PM]    Finished Processing Link                http://twitter.com/chinavitae
-[5/7/2019 7:56:19 PM]    Crawl Finished                          http://www.chinavitae.org/biography_browse.php?l=A
+[5/8/2019 12:36:23 PM]   Starting Crawl                          http://www.chinavitae.org/biography_browse.php?l=A
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/index.php
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/research/
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/library/
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/vip/
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/new/
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/newsletter/
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/aboutus.php
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/faq.php
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/contactus.php
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=A
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=B
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=C
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=D
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=E
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=F
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=G
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=H
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=I
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=J
+[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=K
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=L
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=M
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=N
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=O
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=P
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=Q
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=R
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=S
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=T
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=U
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=V
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=W
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=X
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=Y
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=Z
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Abdul_Abdulrixit
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Abdurehim_Amet
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Abudukader_Naisierding
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Abudureyimu_Ajiyiming
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Agya_Losangtudain
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Baojun
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Guoxiang
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Husheng
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Lihua
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Pishan
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Zhisheng
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Alice Cheung_Wing-chun|888
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Aman_Haji
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Amudun_Niyaz
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Jian
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Limin
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Min
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Pingsheng
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Qiyuan
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Zhaoqing
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Zhendong
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Zhisheng
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Zhiwen
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Zijie
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Ziwen
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Anwar_Amut
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Arken_Imirbaki
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Aronhan'aji_|2313
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ashanbaike_Turdi
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ashat_Kerimbay
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=all
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=bios
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=vips
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=insts
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=locs
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=searches
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/privacy.php
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/donations.php
+[5/8/2019 12:36:24 PM]   Queued Link                             http://twitter.com/chinavitae
+[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/rss/index.php
+[5/8/2019 12:36:24 PM]   Generated Queue                         http://www.chinavitae.org/biography_browse.php?l=A
+[5/8/2019 12:36:24 PM]   Processing new page                     http://www.chinavitae.org/index.php
+[5/8/2019 12:36:24 PM]   Processing new page                     http://www.chinavitae.org/research/
+[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/library/
+[5/8/2019 12:36:58 PM]   Finished Processing Link                http://www.chinavitae.org/index.php
+[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/vip/
+[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/new/
+[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/newsletter/
+[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/aboutus.php
+[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/faq.php
+[5/8/2019 12:37:20 PM]   Finished Processing Link                http://www.chinavitae.org/faq.php
+[5/8/2019 12:37:20 PM]   Processing new page                     http://www.chinavitae.org/contactus.php
+[5/8/2019 12:37:20 PM]   Finished Processing Link                http://www.chinavitae.org/aboutus.php
+[5/8/2019 12:37:20 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=A
+[5/8/2019 12:37:26 PM]   Finished Processing Link                http://www.chinavitae.org/contactus.php
+[5/8/2019 12:37:26 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=B
+[5/8/2019 12:37:26 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=A
+[5/8/2019 12:37:26 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=C
+[5/8/2019 12:37:30 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=D
+[5/8/2019 12:37:30 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=B
+[5/8/2019 12:37:30 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=E
+[5/8/2019 12:37:36 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=F
+[5/8/2019 12:37:36 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=D
+[5/8/2019 12:37:36 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=G
+[5/8/2019 12:37:42 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=H
+[5/8/2019 12:37:42 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=F
+[5/8/2019 12:37:42 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=I
+[5/8/2019 12:37:44 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=J
+[5/8/2019 12:37:44 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=H
+[5/8/2019 12:37:44 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=K
+[5/8/2019 12:37:46 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=L
+[5/8/2019 12:37:46 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=J
+[5/8/2019 12:37:46 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=M
+[5/8/2019 12:37:47 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=N
+[5/8/2019 12:37:47 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=L
+[5/8/2019 12:37:47 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=O
+[5/8/2019 12:37:48 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=P
+[5/8/2019 12:37:48 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=N
+[5/8/2019 12:37:48 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=Q
+[5/8/2019 12:37:49 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=R
+[5/8/2019 12:37:49 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=P
+[5/8/2019 12:37:49 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=S
+[5/8/2019 12:37:50 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=T
+[5/8/2019 12:37:50 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=R
+[5/8/2019 12:37:50 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=U
+[5/8/2019 12:38:03 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=V
+[5/8/2019 12:38:03 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=T
+[5/8/2019 12:38:03 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=W
+[5/8/2019 12:38:04 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=X
+[5/8/2019 12:38:04 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=V
+[5/8/2019 12:38:04 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=Y
+[5/8/2019 12:38:05 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=Z
+[5/8/2019 12:38:05 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=X
+[5/8/2019 12:38:05 PM]   Processing new page                     http://www.chinavitae.org/biography/Abdul_Abdulrixit
+[5/8/2019 12:38:05 PM]   Processing new page                     http://www.chinavitae.org/biography/Abdurehim_Amet
+[5/8/2019 12:38:05 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=Z
+[5/8/2019 12:38:05 PM]   Processing new page                     http://www.chinavitae.org/biography/Abudukader_Naisierding
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Abudureyimu_Ajiyiming
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Agya_Losangtudain
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Baojun
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Guoxiang
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Husheng
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Lihua
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Pishan
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Zhisheng
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Alice Cheung_Wing-chun|888
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Aman_Haji
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Amudun_Niyaz
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Jian
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Limin
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Min
+[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Pingsheng
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Qiyuan
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Zhaoqing
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Zhendong
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Zhisheng
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Zhiwen
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Zijie
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Ziwen
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/Anwar_Amut
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/Arken_Imirbaki
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/Aronhan'aji_|2313
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/Ashanbaike_Turdi
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/Ashat_Kerimbay
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=all
+[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=bios
+[5/8/2019 12:38:12 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=vips
+[5/8/2019 12:38:12 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?clear=all
+[5/8/2019 12:38:12 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=insts
+[5/8/2019 12:38:13 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=locs
+[5/8/2019 12:38:13 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?clear=vips
+[5/8/2019 12:38:13 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=searches
+[5/8/2019 12:38:14 PM]   Processing new page                     http://www.chinavitae.org/privacy.php
+[5/8/2019 12:38:14 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?clear=locs
+[5/8/2019 12:38:14 PM]   Processing new page                     http://www.chinavitae.org/donations.php
+[5/8/2019 12:38:15 PM]   Finished Processing Link                http://www.chinavitae.org/donations.php
+[5/8/2019 12:38:15 PM]   Finished Processing Link                http://www.chinavitae.org/privacy.php
+[5/8/2019 12:38:15 PM]   Processing new page                     http://twitter.com/chinavitae
+[5/8/2019 12:38:15 PM]   Processing new page                     http://www.chinavitae.org/rss/index.php
+[5/8/2019 12:38:17 PM]   Finished Processing Link                http://twitter.com/chinavitae

@@ -60,6 +60,11 @@ namespace ExDeath
             WriteToLog("Failed to process url", url);
         }
 
+        public static void FailedQueue(string url)
+        {
+            WriteToLog("Failed to generate queue", url);
+        }
+
         public static void DownloadedImage(string filename)
         {
             WriteToLog("Downloaded Image", filename);
