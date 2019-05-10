@@ -14,9 +14,10 @@ namespace ExDeath
             //crawler.LoadKeywords(@"../../keywords/chinavitae_words.txt");
             //crawler.Run().Wait();
 
-            Search.TestHeadless();
+            Search.SearchBing("martial arts studio");
 
             Console.WriteLine("DONE");
         }
     }
 }
+    
