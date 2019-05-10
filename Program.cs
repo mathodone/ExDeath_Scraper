@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ExDeath
 {
@@ -8,9 +10,11 @@ namespace ExDeath
         {
             Console.WriteLine("BEGIN");
 
-            Crawler crawler = new Crawler("http://www.chinavitae.org/biography_browse.php?l=A", false);
-            crawler.LoadKeywords(@"../../keywords/chinavitae_words.txt");
-            crawler.Run().Wait();
+            //Crawler crawler = new Crawler("http://www.chinavitae.org/biography_browse.php?l=A", false);
+            //crawler.LoadKeywords(@"../../keywords/chinavitae_words.txt");
+            //crawler.Run().Wait();
+
+            Search.TestHeadless();
 
             Console.WriteLine("DONE");
         }

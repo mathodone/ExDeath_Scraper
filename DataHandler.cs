@@ -33,5 +33,10 @@ namespace ExDeath
 
             return dt;
         }
+
+        public static void ReadXlsx(string path)
+        {
+            //
+        }
     }
 }
