@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ExDeath
 {
@@ -14,7 +9,7 @@ namespace ExDeath
         // reads a csv file into memory
         public static DataTable ReadCsv(string path)
         {
-            StreamReader sr = new StreamReader(path, System.Text.Encoding.UTF7);
+            StreamReader sr = new StreamReader(path, System.Text.Encoding.UTF8);
             string[] headers = sr.ReadLine().Split(',');
             DataTable dt = new DataTable();
 
@@ -37,6 +32,11 @@ namespace ExDeath
             }
 
             return dt;
+        }
+
+        public static void ReadXlsx(string path)
+        {
+            //
         }
     }
 }
