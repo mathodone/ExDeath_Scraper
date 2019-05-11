@@ -15,9 +15,11 @@ namespace ExDeath
         int maxDepth;
 
         // so children don't loop back to already seen node
+        // TODO: use bloom filter. optimizes lookup
         static HashSet<string> seen = new HashSet<string>();
 
         // list of links to crawl. we obtain this from the root url
+        // TODO: make to into hashset. that way don't need to check for dupes
         Queue<string> crawlQueue = new Queue<string>();
 
         // these are the character we split an array by
@@ -86,6 +88,7 @@ namespace ExDeath
                     //add it if its new and contains keywords
                     if (!crawlQueue.Contains(fixedlink))
                     {
+                        //TODO: add fuzzy matching for keywords
                         if (!useKeywords || fixedlink.Split(urlSplit).Intersect(keywords).Any())
                         {
                             lock (seen)
@@ -168,6 +171,7 @@ namespace ExDeath
         }
 
         // create child with 1 less depth
+        // TODO: clean up dead children
         public async Task Spawn(string url)
         {
             await ProcessUrlAsync(url);
