@@ -88,7 +88,7 @@ namespace ExDeath
                     //add it if its new and contains keywords
                     if (!crawlQueue.Contains(fixedlink))
                     {
-                        //TODO: add fuzzy matching for keywords
+                        //TODO: add fuzzy matching for keywords and/or regex pattern matching
                         if (!useKeywords || fixedlink.Split(urlSplit).Intersect(keywords).Any())
                         {
                             lock (seen)
@@ -202,6 +202,7 @@ namespace ExDeath
                 runningTasks.Remove(firstCompletedTask);
 
                 // if we still have pages to crawl and connections available
+                // TODO: manage request delays and maximum connections per domain
                 while (crawlQueue.Any() && runningTasks.Count < ServicePointManager.DefaultConnectionLimit)
                 {
                     var url = crawlQueue.Dequeue();
