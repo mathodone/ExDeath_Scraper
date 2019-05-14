@@ -145,11 +145,74 @@ namespace ExDeath
         {
             Logging.ProcessingNewUrl(url.ToString());
 
+        
+
             using (var response = await client.GetAsync(url, cancellationToken))
             {
                 //response.EnsureSuccessStatusCode();
                 var source = await response.Content.ReadAsStringAsync();
 
+                HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
+                htmlDoc.LoadHtml(source);
+
+                // get all links on the page. this already exists as
+                // GenerateQueueAsync but we dont use it here 
+                // because im too lazy right now to correctly
+                // set GenerateQueueAsync up so im just copy-pasting
+                // a portion of the code here for now and will clean up it later
+                List<string> pageLinks = htmlDoc.DocumentNode
+                                            .Descendants("a")
+                                            .Select(a => a.Attributes["href"].Value)
+                                            .ToList();
+
+                foreach (string link in pageLinks)
+                {
+                    // turn relative paths to absolute
+                    string fixedLink;
+
+                    if (!link.StartsWith("http"))
+                    {
+                        if (link.StartsWith("/"))
+                        {
+                            fixedLink = $"{url.Scheme}://{url.Host}/{link.Substring(1)}";
+                        }
+                        else
+                        {
+                            fixedLink = $"{url.Scheme}://{url.Host}/{link}";
+                        }
+                    }
+                    else
+                    {
+                        fixedLink = link;
+                    }
+
+                    Uri fixedUri = new Uri(fixedLink);
+
+                    //add fixedUri to crawlQueue if not in seen
+                    if (!seen.Contains(fixedUri))
+                    {
+                        seen.Add(fixedUri);
+                        crawlQueue.Enqueue(fixedUri);
+
+                        //TODO: add fuzzy matching for keywords and/or regex pattern matching
+                        //if (!useKeywords || fixedLink.Split(urlSplit).Intersect(keywords).Any())
+                        //{
+                        //    lock (seen)
+                        //    {
+                        //        if (!seen.Contains(fixedLink))
+                        //        {
+                        //            seen.Add(fixedLink);
+                        //            crawlQueue.Enqueue(fixedLink);
+                        //            Logging.QueuedUrl(fixedLin);
+                        //        }
+                        //    }
+                        //}
+                    }
+                }
+
+                Logging.GeneratedQueue(url.ToString());
+
+                // save html to file
                 string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
                 Directory.CreateDirectory(directory);
                 string filepath = $"{directory.Substring(0, directory.LastIndexOf('/'))}/html.txt";
