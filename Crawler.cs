@@ -26,7 +26,6 @@ namespace ExDeath
         HashSet<Uri> seen;
 
         // list of links to crawl. we obtain this from the root url
-        // TODO: make to into hashset. that way don't need to check for dupes
         ConcurrentQueue<Uri> crawlQueue;                            
 
         // these are the character we split an array by
@@ -151,8 +150,10 @@ namespace ExDeath
                 var source = await response.Content.ReadAsStringAsync();
 
                 string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
+                directory = directory.Substring(0, directory.LastIndexOf('/'));
+
                 Directory.CreateDirectory(directory);
-                string filepath = $"{directory.Substring(0, directory.LastIndexOf('/'))}/html.txt";
+                string filepath = $"{directory}/html.txt";
 
                 using (StreamWriter outputFile = new StreamWriter(filepath))
                 {
