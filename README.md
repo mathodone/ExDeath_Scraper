@@ -3,9 +3,16 @@ Flexible C# Async Scraper
 
 # Todo
 
-* See if async actually works correctly
-* Function to download all images from a given page
-* Function to write array inputs to a csv.
-* Function to handle .xlsx import
-* Move download logic from Crawler.cs to Downloader.cs (not urgent)
-* Implement trained url classifier for cutting down crawlQueue
+### Short Term
+
+* Fix relative to absolute path issue during crawling **(URGENT)**
+* Download all images from a page (similar to how html gets downloaded now)
+* csv and xlsx handling.
+
+### Long Term
+
+* Get GUI app running (exists in ExDeathWPF solution)
+* Implement url classification feature
+* Move download logic from Crawler.cs to Downloader.cs
+* Begin implementing scrapers for popular sites (linkedin, etc).
+* Element picker functionality.
