@@ -58,11 +58,13 @@
   <ItemGroup>
     <Compile Include="Crawler.cs" />
     <Compile Include="DataHandler.cs" />
+    <Compile Include="Downloader.cs" />
     <Compile Include="Logging.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scraper.cs" />
     <Compile Include="Search.cs" />
+    <Compile Include="Sift.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

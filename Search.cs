@@ -31,9 +31,9 @@ namespace ExDeath
             htmlDoc.LoadHtml(resultsHtml);
 
             List<string> resultsLinks = htmlDoc.DocumentNode
-                                       .SelectNodes("//li[@class='b_algo']/h2/a ")
-                                       .Select(a => a.Attributes["href"].Value)
-                                       .ToList();
+                                               .SelectNodes("//li[@class='b_algo']/h2/a ")
+                                               .Select(a => a.Attributes["href"].Value)
+                                               .ToList();
 
             return resultsLinks;
         }

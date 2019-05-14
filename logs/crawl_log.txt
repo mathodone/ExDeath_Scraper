@@ -1,176 +1,76 @@
-[5/8/2019 12:36:23 PM]   Starting Crawl                          http://www.chinavitae.org/biography_browse.php?l=A
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/index.php
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/research/
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/library/
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/vip/
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/new/
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/newsletter/
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/aboutus.php
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/faq.php
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/contactus.php
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=A
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=B
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=C
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=D
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=E
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=F
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=G
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=H
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=I
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=J
-[5/8/2019 12:36:23 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=K
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=L
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=M
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=N
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=O
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=P
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=Q
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=R
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=S
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=T
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=U
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=V
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=W
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=X
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=Y
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?l=Z
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Abdul_Abdulrixit
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Abdurehim_Amet
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Abudukader_Naisierding
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Abudureyimu_Ajiyiming
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Agya_Losangtudain
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Baojun
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Guoxiang
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Husheng
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Lihua
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Pishan
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ai_Zhisheng
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Alice Cheung_Wing-chun|888
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Aman_Haji
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Amudun_Niyaz
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Jian
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Limin
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Min
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Pingsheng
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Qiyuan
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Zhaoqing
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Zhendong
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Zhisheng
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Zhiwen
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Zijie
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/An_Ziwen
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Anwar_Amut
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Arken_Imirbaki
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Aronhan'aji_|2313
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ashanbaike_Turdi
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography/Ashat_Kerimbay
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=all
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=bios
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=vips
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=insts
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=locs
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/biography_browse.php?clear=searches
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/privacy.php
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/donations.php
-[5/8/2019 12:36:24 PM]   Queued Link                             http://twitter.com/chinavitae
-[5/8/2019 12:36:24 PM]   Queued Link                             http://www.chinavitae.org/rss/index.php
-[5/8/2019 12:36:24 PM]   Generated Queue                         http://www.chinavitae.org/biography_browse.php?l=A
-[5/8/2019 12:36:24 PM]   Processing new page                     http://www.chinavitae.org/index.php
-[5/8/2019 12:36:24 PM]   Processing new page                     http://www.chinavitae.org/research/
-[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/library/
-[5/8/2019 12:36:58 PM]   Finished Processing Link                http://www.chinavitae.org/index.php
-[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/vip/
-[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/new/
-[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/newsletter/
-[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/aboutus.php
-[5/8/2019 12:36:58 PM]   Processing new page                     http://www.chinavitae.org/faq.php
-[5/8/2019 12:37:20 PM]   Finished Processing Link                http://www.chinavitae.org/faq.php
-[5/8/2019 12:37:20 PM]   Processing new page                     http://www.chinavitae.org/contactus.php
-[5/8/2019 12:37:20 PM]   Finished Processing Link                http://www.chinavitae.org/aboutus.php
-[5/8/2019 12:37:20 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=A
-[5/8/2019 12:37:26 PM]   Finished Processing Link                http://www.chinavitae.org/contactus.php
-[5/8/2019 12:37:26 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=B
-[5/8/2019 12:37:26 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=A
-[5/8/2019 12:37:26 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=C
-[5/8/2019 12:37:30 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=D
-[5/8/2019 12:37:30 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=B
-[5/8/2019 12:37:30 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=E
-[5/8/2019 12:37:36 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=F
-[5/8/2019 12:37:36 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=D
-[5/8/2019 12:37:36 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=G
-[5/8/2019 12:37:42 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=H
-[5/8/2019 12:37:42 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=F
-[5/8/2019 12:37:42 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=I
-[5/8/2019 12:37:44 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=J
-[5/8/2019 12:37:44 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=H
-[5/8/2019 12:37:44 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=K
-[5/8/2019 12:37:46 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=L
-[5/8/2019 12:37:46 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=J
-[5/8/2019 12:37:46 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=M
-[5/8/2019 12:37:47 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=N
-[5/8/2019 12:37:47 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=L
-[5/8/2019 12:37:47 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=O
-[5/8/2019 12:37:48 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=P
-[5/8/2019 12:37:48 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=N
-[5/8/2019 12:37:48 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=Q
-[5/8/2019 12:37:49 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=R
-[5/8/2019 12:37:49 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=P
-[5/8/2019 12:37:49 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=S
-[5/8/2019 12:37:50 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=T
-[5/8/2019 12:37:50 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=R
-[5/8/2019 12:37:50 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=U
-[5/8/2019 12:38:03 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=V
-[5/8/2019 12:38:03 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=T
-[5/8/2019 12:38:03 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=W
-[5/8/2019 12:38:04 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=X
-[5/8/2019 12:38:04 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=V
-[5/8/2019 12:38:04 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=Y
-[5/8/2019 12:38:05 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?l=Z
-[5/8/2019 12:38:05 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=X
-[5/8/2019 12:38:05 PM]   Processing new page                     http://www.chinavitae.org/biography/Abdul_Abdulrixit
-[5/8/2019 12:38:05 PM]   Processing new page                     http://www.chinavitae.org/biography/Abdurehim_Amet
-[5/8/2019 12:38:05 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?l=Z
-[5/8/2019 12:38:05 PM]   Processing new page                     http://www.chinavitae.org/biography/Abudukader_Naisierding
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Abudureyimu_Ajiyiming
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Agya_Losangtudain
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Baojun
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Guoxiang
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Husheng
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Lihua
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Pishan
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Ai_Zhisheng
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Alice Cheung_Wing-chun|888
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Aman_Haji
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/Amudun_Niyaz
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Jian
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Limin
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Min
-[5/8/2019 12:38:06 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Pingsheng
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Qiyuan
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Zhaoqing
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Zhendong
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Zhisheng
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Zhiwen
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Zijie
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/An_Ziwen
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/Anwar_Amut
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/Arken_Imirbaki
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/Aronhan'aji_|2313
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/Ashanbaike_Turdi
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography/Ashat_Kerimbay
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=all
-[5/8/2019 12:38:07 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=bios
-[5/8/2019 12:38:12 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=vips
-[5/8/2019 12:38:12 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?clear=all
-[5/8/2019 12:38:12 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=insts
-[5/8/2019 12:38:13 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=locs
-[5/8/2019 12:38:13 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?clear=vips
-[5/8/2019 12:38:13 PM]   Processing new page                     http://www.chinavitae.org/biography_browse.php?clear=searches
-[5/8/2019 12:38:14 PM]   Processing new page                     http://www.chinavitae.org/privacy.php
-[5/8/2019 12:38:14 PM]   Finished Processing Link                http://www.chinavitae.org/biography_browse.php?clear=locs
-[5/8/2019 12:38:14 PM]   Processing new page                     http://www.chinavitae.org/donations.php
-[5/8/2019 12:38:15 PM]   Finished Processing Link                http://www.chinavitae.org/donations.php
-[5/8/2019 12:38:15 PM]   Finished Processing Link                http://www.chinavitae.org/privacy.php
-[5/8/2019 12:38:15 PM]   Processing new page                     http://twitter.com/chinavitae
-[5/8/2019 12:38:15 PM]   Processing new page                     http://www.chinavitae.org/rss/index.php
-[5/8/2019 12:38:17 PM]   Finished Processing Link                http://twitter.com/chinavitae
+[5/13/2019 10:01:10 PM]  Starting Crawl                          http://books.toscrape.com/
+[5/13/2019 10:01:11 PM]  Generated Queue                         http://books.toscrape.com/
+[5/13/2019 10:01:11 PM]  Processing new page                     http://books.toscrape.com/index.html
+[5/13/2019 10:01:11 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books_1/index.html
+[5/13/2019 10:01:12 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[5/13/2019 10:01:12 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[5/13/2019 10:01:12 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+[5/13/2019 10:01:12 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+[5/13/2019 10:01:12 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/classics_6/index.html
+[5/13/2019 10:01:12 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+[5/13/2019 10:01:12 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/romance_8/index.html
+[5/13/2019 10:01:13 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html
+[5/13/2019 10:01:13 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+[5/13/2019 10:01:13 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/childrens_11/index.html
+[5/13/2019 10:01:13 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/religion_12/index.html
+[5/13/2019 10:01:13 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html
+[5/13/2019 10:01:13 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/music_14/index.html
+[5/13/2019 10:01:13 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/default_15/index.html
+[5/13/2019 10:01:13 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html
+[5/13/2019 10:01:13 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+[5/13/2019 10:01:13 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html
+[5/13/2019 10:01:14 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/fantasy_19/index.html
+[5/13/2019 10:01:14 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/new-adult_20/index.html
+[5/13/2019 10:01:14 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/young-adult_21/index.html
+[5/13/2019 10:01:14 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/science_22/index.html
+[5/13/2019 10:01:15 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/poetry_23/index.html
+[5/13/2019 10:01:15 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/paranormal_24/index.html
+[5/13/2019 10:01:15 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/art_25/index.html
+[5/13/2019 10:01:15 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/psychology_26/index.html
+[5/13/2019 10:01:15 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/autobiography_27/index.html
+[5/13/2019 10:01:15 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/parenting_28/index.html
+[5/13/2019 10:01:16 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html
+[5/13/2019 10:01:16 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/humor_30/index.html
+[5/13/2019 10:01:16 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/horror_31/index.html
+[5/13/2019 10:01:16 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/history_32/index.html
+[5/13/2019 10:01:16 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html
+[5/13/2019 10:01:16 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html
+[5/13/2019 10:01:16 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/business_35/index.html
+[5/13/2019 10:01:16 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/biography_36/index.html
+[5/13/2019 10:01:17 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/thriller_37/index.html
+[5/13/2019 10:01:17 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/contemporary_38/index.html
+[5/13/2019 10:01:17 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/spirituality_39/index.html
+[5/13/2019 10:01:17 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/academic_40/index.html
+[5/13/2019 10:01:17 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/self-help_41/index.html
+[5/13/2019 10:01:17 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/historical_42/index.html
+[5/13/2019 10:01:17 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/christian_43/index.html
+[5/13/2019 10:01:17 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/suspense_44/index.html
+[5/13/2019 10:01:18 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/short-stories_45/index.html
+[5/13/2019 10:01:18 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/novels_46/index.html
+[5/13/2019 10:01:18 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/health_47/index.html
+[5/13/2019 10:01:18 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/politics_48/index.html
+[5/13/2019 10:01:18 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/cultural_49/index.html
+[5/13/2019 10:01:18 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/erotica_50/index.html
+[5/13/2019 10:01:18 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/crime_51/index.html
+[5/13/2019 10:01:18 PM]  Processing new page                     http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+[5/13/2019 10:01:19 PM]  Processing new page                     http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html
+[5/13/2019 10:01:19 PM]  Processing new page                     http://books.toscrape.com/catalogue/soumission_998/index.html
+[5/13/2019 10:01:19 PM]  Processing new page                     http://books.toscrape.com/catalogue/sharp-objects_997/index.html
+[5/13/2019 10:01:19 PM]  Processing new page                     http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html
+[5/13/2019 10:01:19 PM]  Processing new page                     http://books.toscrape.com/catalogue/the-requiem-red_995/index.html
+[5/13/2019 10:01:19 PM]  Processing new page                     http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+[5/13/2019 10:01:20 PM]  Processing new page                     http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html
+[5/13/2019 10:01:20 PM]  Processing new page                     http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html
+[5/13/2019 10:01:20 PM]  Processing new page                     http://books.toscrape.com/catalogue/the-black-maria_991/index.html
+[5/13/2019 10:01:20 PM]  Processing new page                     http://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html
+[5/13/2019 10:01:20 PM]  Processing new page                     http://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html
+[5/13/2019 10:01:20 PM]  Processing new page                     http://books.toscrape.com/catalogue/set-me-free_988/index.html
+[5/13/2019 10:01:20 PM]  Processing new page                     http://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html
+[5/13/2019 10:01:20 PM]  Processing new page                     http://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html
+[5/13/2019 10:01:21 PM]  Processing new page                     http://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html
+[5/13/2019 10:01:21 PM]  Processing new page                     http://books.toscrape.com/catalogue/olio_984/index.html
+[5/13/2019 10:01:21 PM]  Processing new page                     http://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html
+[5/13/2019 10:01:21 PM]  Processing new page                     http://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html
+[5/13/2019 10:01:21 PM]  Processing new page                     http://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html
+[5/13/2019 10:01:21 PM]  Processing new page                     http://books.toscrape.com/catalogue/page-2.html
+[5/13/2019 10:01:22 PM]  Crawl Finished                          http://books.toscrape.com/
