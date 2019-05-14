@@ -1,5 +1,5 @@
 # ExDeath_Scraper
-Flexible C# Async Scraper
+Flexible C# Scraping Application
 
 # Todo
 
