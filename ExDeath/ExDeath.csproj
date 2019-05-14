@@ -65,6 +65,7 @@
     <Compile Include="Scraper.cs" />
     <Compile Include="Search.cs" />
     <Compile Include="Sift.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

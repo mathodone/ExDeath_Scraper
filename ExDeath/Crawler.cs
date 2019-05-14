@@ -26,7 +26,6 @@ namespace ExDeath
         HashSet<Uri> seen;
 
         // list of links to crawl. we obtain this from the root url
-        // TODO: make to into hashset. that way don't need to check for dupes
         ConcurrentQueue<Uri> crawlQueue;                            
 
         // these are the character we split an array by
@@ -41,9 +40,12 @@ namespace ExDeath
 
         //Downloader _downloader;
 
+        // whether or not we want to download the page html
+        bool downloadHtml;
+
         static string downloadsDirectory;
 
-        public Crawler(string url, bool usekeywords = false, int maxConnections = 2, int depth = 2)
+        public Crawler(string url, bool usekeywords = false, int maxConnections = 2, int depth = 2, bool download = false)
         {
             maxDepth = depth;
             crawlQueue = new ConcurrentQueue<Uri>();
@@ -52,6 +54,7 @@ namespace ExDeath
             seen = new HashSet<Uri>();
             useKeywords = usekeywords;
             downloadsDirectory = $"../../downloads/{uri.Host}";
+            downloadHtml = download;
 
             // max # of connections allowed to an IP in parallel
             // if too high, the program will be throttled/blocked. best to use 2 for most sites.
@@ -66,19 +69,12 @@ namespace ExDeath
         
         // gets a list of links from a given page and add them
         // to the crawlQueue
-        public async Task GenerateQueueAsync(Uri url)
+        public async Task GenerateQueueAsync(Uri url, string html)
         {
             try
             {
-                HttpResponseMessage response = await client.GetAsync(uri);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-
-                // save html of root page to file
-                File.WriteAllText(downloadsDirectory + $"/{uri.Host}.txt", responseBody);
-
                 HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
-                htmlDoc.LoadHtml(responseBody);
+                htmlDoc.LoadHtml(html);
 
                 // get all links on the page
                 List<string> pageLinks = htmlDoc.DocumentNode
@@ -145,82 +141,29 @@ namespace ExDeath
         {
             Logging.ProcessingNewUrl(url.ToString());
 
-        
-
             using (var response = await client.GetAsync(url, cancellationToken))
             {
-                //response.EnsureSuccessStatusCode();
+                response.EnsureSuccessStatusCode();
                 var source = await response.Content.ReadAsStringAsync();
 
-                HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
-                htmlDoc.LoadHtml(source);
-
-                // get all links on the page. this already exists as
-                // GenerateQueueAsync but we dont use it here 
-                // because im too lazy right now to correctly
-                // set GenerateQueueAsync up so im just copy-pasting
-                // a portion of the code here for now and will clean up it later
-                List<string> pageLinks = htmlDoc.DocumentNode
-                                            .Descendants("a")
-                                            .Select(a => a.Attributes["href"].Value)
-                                            .ToList();
-
-                foreach (string link in pageLinks)
-                {
-                    // turn relative paths to absolute
-                    string fixedLink;
-
-                    if (!link.StartsWith("http"))
-                    {
-                        if (link.StartsWith("/"))
-                        {
-                            fixedLink = $"{url.Scheme}://{url.Host}/{link.Substring(1)}";
-                        }
-                        else
-                        {
-                            fixedLink = $"{url.Scheme}://{url.Host}/{link}";
-                        }
-                    }
-                    else
-                    {
-                        fixedLink = link;
-                    }
-
-                    Uri fixedUri = new Uri(fixedLink);
-
-                    //add fixedUri to crawlQueue if not in seen
-                    if (!seen.Contains(fixedUri))
-                    {
-                        seen.Add(fixedUri);
-                        crawlQueue.Enqueue(fixedUri);
-
-                        //TODO: add fuzzy matching for keywords and/or regex pattern matching
-                        //if (!useKeywords || fixedLink.Split(urlSplit).Intersect(keywords).Any())
-                        //{
-                        //    lock (seen)
-                        //    {
-                        //        if (!seen.Contains(fixedLink))
-                        //        {
-                        //            seen.Add(fixedLink);
-                        //            crawlQueue.Enqueue(fixedLink);
-                        //            Logging.QueuedUrl(fixedLin);
-                        //        }
-                        //    }
-                        //}
-                    }
-                }
-
+                // get all links from the page for queue
+                await GenerateQueueAsync(url, source);
                 Logging.GeneratedQueue(url.ToString());
 
-                // save html to file
-                string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
-                Directory.CreateDirectory(directory);
-                string filepath = $"{directory.Substring(0, directory.LastIndexOf('/'))}/html.txt";
-
-                using (StreamWriter outputFile = new StreamWriter(filepath))
+                if (downloadHtml)
                 {
-                    await outputFile.WriteAsync(source);
-                    await outputFile.FlushAsync();
+                    // save html to file
+                    string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
+                    directory = directory.Substring(0, directory.LastIndexOf('/'));
+
+                    Directory.CreateDirectory(directory);
+                    string filepath = $"{directory}/html.txt";
+
+                    using (StreamWriter outputFile = new StreamWriter(filepath))
+                    {
+                        await outputFile.WriteAsync(source);
+                        await outputFile.FlushAsync();
+                    }
                 }
             }
 
@@ -264,7 +207,7 @@ namespace ExDeath
             // create new directory to store files
             DirectoryInfo siteDirectory = Directory.CreateDirectory(downloadsDirectory);
 
-            var runningTasks = new HashSet<Task> { GenerateQueueAsync(uri) };
+            var runningTasks = new HashSet<Task> { ProcessUrlAsync(uri, token) };
             var maxTasks = ServicePointManager.DefaultConnectionLimit;
 
             void AddProcessTask()
@@ -295,8 +238,6 @@ namespace ExDeath
                     AddProcessTask();
                 }
             }
-
-
 
             //while (runningTasks.Any())
             //{
