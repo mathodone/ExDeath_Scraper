@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28705.295
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExDeath", "ExDeath.csproj", "{7E6BC556-A0F4-4B3F-B54A-D657ACF352B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExDeath", "ExDeath\ExDeath.csproj", "{7E6BC556-A0F4-4B3F-B54A-D657ACF352B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExDeathTests", "ExDeathTests\ExDeathTests.csproj", "{9B6339BE-CF8B-4648-9E34-620CD126E68E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExDeathWPF", "ExDeathWPF\ExDeathWPF.csproj", "{683B29D0-ABDD-489A-B4A8-A1DC0A462307}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,11 +19,19 @@ Global
 		{7E6BC556-A0F4-4B3F-B54A-D657ACF352B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E6BC556-A0F4-4B3F-B54A-D657ACF352B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E6BC556-A0F4-4B3F-B54A-D657ACF352B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B6339BE-CF8B-4648-9E34-620CD126E68E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6339BE-CF8B-4648-9E34-620CD126E68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B6339BE-CF8B-4648-9E34-620CD126E68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6339BE-CF8B-4648-9E34-620CD126E68E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{683B29D0-ABDD-489A-B4A8-A1DC0A462307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683B29D0-ABDD-489A-B4A8-A1DC0A462307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683B29D0-ABDD-489A-B4A8-A1DC0A462307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683B29D0-ABDD-489A-B4A8-A1DC0A462307}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3880961B-5F9D-444D-A638-5C0CC1A3CF90}
+		SolutionGuid = {97182773-4C0F-410A-98D2-5D2457CAC862}
 	EndGlobalSection
 EndGlobal
