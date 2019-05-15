@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Http;
+using HtmlAgilityPack;
 
 namespace ExDeath
 {
@@ -18,21 +19,48 @@ namespace ExDeath
             return;
         }
 
-        //public static void DownloadImages(string html)
-        //{
-        //    HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
-        //    htmlDoc.LoadHtml(html);
+        public static async Task DownloadImages(string html, Uri url, string downloadsDirectory)
+        {
+            // parse HTML
+            HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
+            htmlDoc.LoadHtml(html);
 
-        //    // get all image nodes on the page
-        //    List<string> imgLinks = htmlDoc.DocumentNode
-        //                                .Descendants("img")
-        //                                .Select(img => img.Attributes["src"].Value)
-        //                                .ToList();
+            // get all image nodes on the page
+            List<string> imgLinks = htmlDoc.DocumentNode
+                                        .Descendants("img")
+                                        .Select(img => img.Attributes["src"].Value)
+                                        .ToList();
 
-        //    foreach (string imgLink in imgLinks)
-        //    {
-        //        //
-        //    }
-        //}
+            string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
+            directory = directory.Substring(0, directory.LastIndexOf('/'));
+
+            WebClient client = new WebClient();
+
+            //loop through all imgs and save to directory
+            foreach (string imgLink in imgLinks)
+            {
+                string imgName = imgLink.Substring(imgLink.LastIndexOf('/')+1);
+                Uri absoluteUrl = new Uri(url, imgLink);
+
+                await client.DownloadFileTaskAsync(absoluteUrl, $"{directory}/{imgName}");
+            }
+        }
+
+        public static async Task DownloadHtml(string source, Uri url, string downloadsDirectory)
+        {
+            // create save directory 
+            string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
+            directory = directory.Substring(0, directory.LastIndexOf('/'));
+
+            Directory.CreateDirectory(directory);
+            string filepath = $"{directory}/html.txt";
+
+            // save html to file
+            using (StreamWriter outputFile = new StreamWriter(filepath))
+            {
+                await outputFile.WriteAsync(source);
+                await outputFile.FlushAsync();
+            }
+        }
     }
 }

@@ -23,7 +23,8 @@ namespace ExDeath
 
         // so children don't loop back to already seen node
         // TODO: use bloom filter. optimizes lookup
-        HashSet<Uri> seen;
+        // is dictionary with trash var byte because ConcurrentSet doesn't exist
+        ConcurrentDictionary<Uri, byte> seen;
 
         // list of links to crawl. we obtain this from the root url
         ConcurrentQueue<Uri> crawlQueue;                            
@@ -41,20 +42,21 @@ namespace ExDeath
         //Downloader _downloader;
 
         // whether or not we want to download the page html
-        bool downloadHtml;
+        bool downloadHtml, downloadImage;
 
         static string downloadsDirectory;
 
-        public Crawler(string url, bool usekeywords = false, int maxConnections = 2, int depth = 2, bool download = false)
+        public Crawler(string url, bool usekeywords = false, int maxConnections = 2, int depth = 2, bool dlHtml = false, bool dlImage = false)
         {
             maxDepth = depth;
             crawlQueue = new ConcurrentQueue<Uri>();
             uri = new Uri(url);
             client = new HttpClient();
-            seen = new HashSet<Uri>();
+            seen = new ConcurrentDictionary<Uri, byte>();
             useKeywords = usekeywords;
             downloadsDirectory = $"../../downloads/{uri.Host}";
-            downloadHtml = download;
+            downloadHtml = dlHtml;
+            downloadImage = dlImage;
 
             // max # of connections allowed to an IP in parallel
             // if too high, the program will be throttled/blocked. best to use 2 for most sites.
@@ -106,24 +108,12 @@ namespace ExDeath
                     //string fixedLink = !link.StartsWith("http") ? $"{url.Scheme}://{url.Host}/{link}" : link;
                     Uri fixedUri = new Uri(fixedLink);
                     //add fixedUri to crawlQueue if not in seen
-                    if (!seen.Contains(fixedUri))
+                    if (!seen.ContainsKey(fixedUri))
                     {
-                        seen.Add(fixedUri);
+                        seen.TryAdd(fixedUri,0);
                         crawlQueue.Enqueue(fixedUri);
 
                         //TODO: add fuzzy matching for keywords and/or regex pattern matching
-                        //if (!useKeywords || fixedLink.Split(urlSplit).Intersect(keywords).Any())
-                        //{
-                        //    lock (seen)
-                        //    {
-                        //        if (!seen.Contains(fixedLink))
-                        //        {
-                        //            seen.Add(fixedLink);
-                        //            crawlQueue.Enqueue(fixedLink);
-                        //            Logging.QueuedUrl(fixedLin);
-                        //        }
-                        //    }
-                        //}
                     }
                 }
 
@@ -153,17 +143,12 @@ namespace ExDeath
                 if (downloadHtml)
                 {
                     // save html to file
-                    string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
-                    directory = directory.Substring(0, directory.LastIndexOf('/'));
-
-                    Directory.CreateDirectory(directory);
-                    string filepath = $"{directory}/html.txt";
-
-                    using (StreamWriter outputFile = new StreamWriter(filepath))
-                    {
-                        await outputFile.WriteAsync(source);
-                        await outputFile.FlushAsync();
-                    }
+                    await Downloader.DownloadHtml(source, url, downloadsDirectory);
+                }
+                if (downloadImage)
+                {
+                    // save all images to file
+                    await Downloader.DownloadImages(source, url, downloadsDirectory);
                 }
             }
 
