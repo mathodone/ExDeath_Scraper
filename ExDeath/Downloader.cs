@@ -33,6 +33,7 @@ namespace ExDeath
 
             string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
             directory = directory.Substring(0, directory.LastIndexOf('/'));
+            Directory.CreateDirectory(directory);
 
             WebClient client = new WebClient();
 
