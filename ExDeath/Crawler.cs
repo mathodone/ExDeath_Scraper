@@ -123,7 +123,7 @@ namespace ExDeath
                     }
                 }
 
-                Logging.GeneratedQueue(uri.ToString());
+                //Logging.GeneratedQueue(uri.ToString());
             }
             catch (HttpRequestException e)
             {
@@ -220,6 +220,10 @@ namespace ExDeath
 
             // create new directory to store files
             DirectoryInfo siteDirectory = Directory.CreateDirectory(downloadsDirectory);
+            if (downloadImage)
+            {
+                Directory.CreateDirectory($"{downloadsDirectory}/images");
+            }
 
             var runningTasks = new HashSet<Task> { ProcessUrlAsync(uri, token) };
             var maxTasks = ServicePointManager.DefaultConnectionLimit;
