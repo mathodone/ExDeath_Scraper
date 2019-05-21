@@ -5,12 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExDeathWPF"
         mc:Ignorable="d"
-        Title="ExDeath Scraper" Height="450" Width="800">
-    <Grid>
-        <TextBox Name="crawlUrl" HorizontalAlignment="Left" Height="21" Margin="16,17,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="662"/>
-        <Button Content="Crawl" Click="Button_Crawl" HorizontalAlignment="Left" Margin="696,18,0,0" VerticalAlignment="Top" Width="75"/>
-        <DataGrid HorizontalAlignment="Left" Height="345" Margin="16,64,0,0" VerticalAlignment="Top" Width="755"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="16,43,0,0" Width="76" Height="16"><Run Text="Queue Size:"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="84,43,0,0"/>
+        Title="Scraper" Height="461.111" Width="796.296">
+    <Grid Margin="0,0,2,3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="232*"/>
+            <ColumnDefinition Width="161*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="crawlUrl" HorizontalAlignment="Left" Height="21" Margin="21,36,0,0" TextWrapping="Wrap" Text="Enter url" VerticalAlignment="Top" Width="657" RenderTransformOrigin="0.498,0.506" Grid.ColumnSpan="2"/>
+        <Button Content="Search" Click="Button_Search" HorizontalAlignment="Left" Margin="232,36,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Height="20"/>
+
+        <DataGrid HorizontalAlignment="Left" Height="304" Margin="16,105,0,0" VerticalAlignment="Top" Width="755" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="21,10,0,0" Width="76" Height="16" Text="Base Url"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="84,43,0,0" Height="16" Width="0"/>
+        <CheckBox Content="Download HTML" IsChecked="{Binding dlHtml}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,64,0,0" Height="15" Width="109"/>
+        <CheckBox Content="Download Images" IsChecked="{Binding dlImage}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="143,64,0,0" Height="15" Width="115"/>
+        <CheckBox Content="Use Keywords" IsChecked="{Binding useKeywords}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="272,64,0,0" Height="15" Width="94"/>
+        <CheckBox Content="Search" IsChecked="{Binding useSearch}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="384,64,0,0" Height="15" Width="55"/>
+        <TextBox HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" Text="Regex for Search" VerticalAlignment="Top" Width="120" Margin="0,64,0,0" TextChanged="TextBox_TextChanged" Grid.Column="1"/>
     </Grid>
 </Window>

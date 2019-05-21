@@ -23,7 +23,8 @@ namespace ExDeath
 
         // so children don't loop back to already seen node
         // TODO: use bloom filter. optimizes lookup
-        HashSet<Uri> seen;
+        // is dictionary with trash var byte because ConcurrentSet doesn't exist
+        ConcurrentDictionary<Uri, byte> seen;
 
         // list of links to crawl. we obtain this from the root url
         ConcurrentQueue<Uri> crawlQueue;                            
@@ -34,6 +35,10 @@ namespace ExDeath
         // whether or not to use a keywords list
         bool useKeywords;
 
+        // if we want to search our pages for a certain term
+        bool searchPages;
+        string searchTerm;
+
         // these are the keywords we use to flag links we're interested in.
         // these are loaded from a txt file in the LoadKeywords function
         static HashSet<string> keywords;
@@ -41,20 +46,23 @@ namespace ExDeath
         //Downloader _downloader;
 
         // whether or not we want to download the page html
-        bool downloadHtml;
+        bool downloadHtml, downloadImage;
 
         static string downloadsDirectory;
 
-        public Crawler(string url, bool usekeywords = false, int maxConnections = 2, int depth = 2, bool download = false)
+        public Crawler(string url, bool usekeywords = false, int maxConnections = 2, int depth = 2, bool dlHtml = false, bool dlImage = false, bool useSearch = false, string searchTerm = "")
         {
             maxDepth = depth;
             crawlQueue = new ConcurrentQueue<Uri>();
             uri = new Uri(url);
             client = new HttpClient();
-            seen = new HashSet<Uri>();
+            seen = new ConcurrentDictionary<Uri, byte>();
             useKeywords = usekeywords;
             downloadsDirectory = $"../../downloads/{uri.Host}";
-            downloadHtml = download;
+            downloadHtml = dlHtml;
+            downloadImage = dlImage;
+            searchPages = useSearch;
+            this.searchTerm = searchTerm;
 
             // max # of connections allowed to an IP in parallel
             // if too high, the program will be throttled/blocked. best to use 2 for most sites.
@@ -106,24 +114,12 @@ namespace ExDeath
                     //string fixedLink = !link.StartsWith("http") ? $"{url.Scheme}://{url.Host}/{link}" : link;
                     Uri fixedUri = new Uri(fixedLink);
                     //add fixedUri to crawlQueue if not in seen
-                    if (!seen.Contains(fixedUri))
+                    if (!seen.ContainsKey(fixedUri))
                     {
-                        seen.Add(fixedUri);
+                        seen.TryAdd(fixedUri,0);
                         crawlQueue.Enqueue(fixedUri);
 
                         //TODO: add fuzzy matching for keywords and/or regex pattern matching
-                        //if (!useKeywords || fixedLink.Split(urlSplit).Intersect(keywords).Any())
-                        //{
-                        //    lock (seen)
-                        //    {
-                        //        if (!seen.Contains(fixedLink))
-                        //        {
-                        //            seen.Add(fixedLink);
-                        //            crawlQueue.Enqueue(fixedLink);
-                        //            Logging.QueuedUrl(fixedLin);
-                        //        }
-                        //    }
-                        //}
                     }
                 }
 
@@ -136,8 +132,8 @@ namespace ExDeath
             }
         }
 
-        // download HTML of a page
-        private async Task ProcessUrlAsync(Uri url, CancellationToken cancellationToken)
+        // process a url from the queue
+        public async Task ProcessUrlAsync(Uri url, CancellationToken cancellationToken)
         {
             Logging.ProcessingNewUrl(url.ToString());
 
@@ -150,24 +146,35 @@ namespace ExDeath
                 await GenerateQueueAsync(url, source);
                 Logging.GeneratedQueue(url.ToString());
 
+                if (searchPages)
+                {
+                    IEnumerable<HtmlNode> nodes = Sift.SearchPage(source, searchTerm);
+                    Console.WriteLine();
+                }
+
                 if (downloadHtml)
                 {
                     // save html to file
-                    string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
-                    directory = directory.Substring(0, directory.LastIndexOf('/'));
-
-                    Directory.CreateDirectory(directory);
-                    string filepath = $"{directory}/html.txt";
-
-                    using (StreamWriter outputFile = new StreamWriter(filepath))
-                    {
-                        await outputFile.WriteAsync(source);
-                        await outputFile.FlushAsync();
-                    }
+                    await Downloader.DownloadHtml(source, url, downloadsDirectory);
+                }
+                if (downloadImage)
+                {
+                    // save all images to file
+                    await Downloader.DownloadImages(source, url, downloadsDirectory);
                 }
             }
 
             return;
+        }
+
+        private Task TryProcessQueue(CancellationToken cancellationToken)
+        {
+            if (crawlQueue.TryDequeue(out Uri poppedUri))
+            {
+                return ProcessUrlAsync(poppedUri, cancellationToken);
+            }
+
+            return null;
         }
 
         // create child with 1 less depth
@@ -183,16 +190,23 @@ namespace ExDeath
         //        await crawler.Run();
         //    }
         //}
+        //
+        //while (runningTasks.Any())
+        //{
+        //    var firstCompletedTask = await Task.WhenAny(runningTasks);
+        //    runningTasks.Remove(firstCompletedTask);
 
-        private Task TryProcessQueue(CancellationToken cancellationToken)
-        {
-            if (crawlQueue.TryDequeue(out Uri poppedUri))
-            {
-                return ProcessUrlAsync(poppedUri, cancellationToken);
-            }
+        //    // if we still have pages to crawl and connections available
+        //    // TODO: manage request delays and maximum connections per domain
+        //    while (crawlQueue.Any() && runningTasks.Count < ServicePointManager.DefaultConnectionLimit)
+        //    {
+        //        crawlQueue.TryDequeue(out Uri url);
+        //        // create recursive child on each crawlQueue
+        //        runningTasks.Add(Task.Run(() => Spawn(url)));
+        //    }
+        //}
+        //await Task.WhenAll(runningTasks);
 
-            return null;
-        }
 
         public async Task Run()
         {
@@ -238,22 +252,6 @@ namespace ExDeath
                     AddProcessTask();
                 }
             }
-
-            //while (runningTasks.Any())
-            //{
-            //    var firstCompletedTask = await Task.WhenAny(runningTasks);
-            //    runningTasks.Remove(firstCompletedTask);
-
-            //    // if we still have pages to crawl and connections available
-            //    // TODO: manage request delays and maximum connections per domain
-            //    while (crawlQueue.Any() && runningTasks.Count < ServicePointManager.DefaultConnectionLimit)
-            //    {
-            //        crawlQueue.TryDequeue(out Uri url);
-            //        // create recursive child on each crawlQueue
-            //        runningTasks.Add(Task.Run(() => Spawn(url)));
-            //    }
-            //}
-            //await Task.WhenAll(runningTasks);
 
             Logging.CrawlFinished(uri.ToString());
             return;

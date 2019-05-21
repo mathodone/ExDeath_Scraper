@@ -21,18 +21,34 @@ namespace ExDeathWPF
     public partial class MainWindow : Window
     {
 
+        public bool dlHtml { get; set; }
+        public bool dlImage { get; set; }
+        public bool useKeywords { get; set; }
+        public bool useSearch { get; set; }
+
+
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Crawl(object sender, RoutedEventArgs e)
+        private async void Button_Search(object sender, RoutedEventArgs e)
         {
             string url = crawlUrl.Text;
-            ExDeath.Crawler crawler = new ExDeath.Crawler(url);
-            crawler.Run().Wait();
+            ExDeath.Crawler crawler = new ExDeath.Crawler(url: url, usekeywords: useKeywords, dlHtml: dlHtml, dlImage: dlImage, useSearch: useSearch);
+            await crawler.Run();
             MessageBox.Show("Done");
         }
 
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
