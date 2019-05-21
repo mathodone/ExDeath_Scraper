@@ -31,14 +31,15 @@ namespace ExDeathWPF
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = this;
         }
 
         private async void Button_Search(object sender, RoutedEventArgs e)
         {
             string url = crawlUrl.Text;
-            ExDeath.Crawler crawler = new ExDeath.Crawler(url: url, usekeywords: useKeywords, dlHtml: dlHtml, dlImage: dlImage, useSearch: useSearch);
-            await crawler.Run();
-            MessageBox.Show("Done");
+            //ExDeath.Crawler crawler = new ExDeath.Crawler(url: url, usekeywords: useKeywords, dlHtml: dlHtml, dlImage: dlImage, useSearch: useSearch);
+            //await crawler.Run();
+            Console.WriteLine(dlHtml);
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
