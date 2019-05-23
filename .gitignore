@@ -6,7 +6,6 @@
 # ignore these folders
 keywords/
 downloads/
-logs/
 
 # User-specific files
 *.rsuser
