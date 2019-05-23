@@ -54,7 +54,7 @@ namespace ExDeath
         {
             // create save directory 
             string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
-            directory = directory.Substring(0, directory.LastIndexOf('/'));
+            //directory = directory.Substring(0, directory.LastIndexOf('/'));
 
             Directory.CreateDirectory(directory);
             string filepath = $"{directory}/html.txt";
