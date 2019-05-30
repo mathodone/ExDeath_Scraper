@@ -87,11 +87,13 @@ namespace ExDeathWPF
 
             foreach (string term in terms)
             {
+                Console.WriteLine($"Searching for term:{term}");
                 List<string> results = await Task.Run(() => driver.SearchBing(term));
                 lock (_syncLock)
                 {
-                    SearchResults.Add(new SearchResult() { Term = term, Link = results.First() }); ;
+                    SearchResults.Add(new SearchResult() { Term = term, Link = results.First() });
                 }
+                System.Threading.Thread.Sleep(3000);
             }
         }
 
