@@ -48,7 +48,7 @@ namespace ExDeathWPF
         }
 
         class CrawlerViewModel {}
-        public class SearchViewModel{}
+        public class SearchViewModel {}
 
         public class SearchResult
         {
@@ -75,7 +75,7 @@ namespace ExDeathWPF
             Console.WriteLine(DlHtml);
         }
 
-        private void Button_Search(object sender, RoutedEventArgs e)
+        private async void Button_Search(object sender, RoutedEventArgs e)
         {
             SearchResults.Clear();
             dgSearchResults.ItemsSource = SearchResults;
@@ -87,7 +87,7 @@ namespace ExDeathWPF
 
             foreach (string term in terms)
             {
-                var results = driver.SearchBing(term);
+                List<string> results = await Task.Run(() => driver.SearchBing(term));
                 lock (_syncLock)
                 {
                     SearchResults.Add(new SearchResult() { Term = term, Link = results.First() }); ;

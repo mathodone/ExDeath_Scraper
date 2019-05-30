@@ -16,22 +16,20 @@ namespace ExDeath
         public Search()
         {
             ChromeOptions options = new ChromeOptions();
-            options.AddArgument("--headless");
+            //options.AddArgument("--headless");
             WebDriver = new ChromeDriver(options);
         }
 
         // gets links from first page of results
         public List<string> SearchBing(string term)
         {
-            WebDriver.Navigate().GoToUrl(@"https://www.bing.com/");
-
+            WebDriver.Navigate().GoToUrl($"https://www.bing.com/search?q={term.Replace(' ','+')}");
             string title = WebDriver.Title;
             string html = WebDriver.PageSource;
-            IWebElement searchbar = WebDriver.FindElement(By.Id("sb_form_q"));
-            searchbar.SendKeys(Keys.Control + "a");
-            searchbar.SendKeys(Keys.Delete);
-            searchbar.SendKeys(term);
-            searchbar.SendKeys(Keys.Enter);
+            //IWebElement searchbar = WebDriver.FindElement(By.Id("sb_form_q"));
+            //searchbar.SendKeys(term);
+            //System.Threading.Thread.Sleep(5000);
+            //WebDriver.FindElement(By.Id("sb_form_go")).Click();
 
             // load the search results html
             string resultsHtml = WebDriver.PageSource;
