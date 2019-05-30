@@ -35,7 +35,7 @@
                             <ColumnDefinition Width="363*"/>
                         </Grid.ColumnDefinitions>
                         <Label Content="Search Terms (Comma Separated)&#xD;&#xA;" Margin="10,0,562,358" Grid.ColumnSpan="2"/>
-                        <TextBox Name="searchTerm" HorizontalAlignment="Left" Height="63" Margin="168,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="392" RenderTransformOrigin="0.498,0.506" Grid.Column="1"/>
+                        <TextBox Name="searchTerm" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left" Height="63" Margin="168,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="392" RenderTransformOrigin="0.498,0.506" Grid.Column="1"/>
                         <Button Content="Search" Click="Button_Search" HorizontalAlignment="Left" Margin="590,22,0,0" VerticalAlignment="Top" Width="76" Height="20" Grid.Column="1"/>
                         <Label Content="Engine" Margin="10,31,692,333" Grid.ColumnSpan="2"/>
                         <CheckBox Content="Bing" IsChecked="{Binding engineBing}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53.5,37,0,0" Height="15" Width="67" Grid.Column="1"/>
