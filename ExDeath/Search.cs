@@ -9,24 +9,32 @@ using HtmlAgilityPack;
 
 namespace ExDeath
 {
-    class Search
+    public class Search
     {
-        // gets links from first page of results
-        public static List<string> SearchBing(string term)
-        {
-            IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(@"https://www.bing.com/");
+        static IWebDriver WebDriver;
 
-            string title = driver.Title;
-            string html = driver.PageSource;
-            IWebElement searchbar = driver.FindElement(By.Id("sb_form_q"));
+        public Search()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--headless");
+            WebDriver = new ChromeDriver(options);
+        }
+
+        // gets links from first page of results
+        public List<string> SearchBing(string term)
+        {
+            WebDriver.Navigate().GoToUrl(@"https://www.bing.com/");
+
+            string title = WebDriver.Title;
+            string html = WebDriver.PageSource;
+            IWebElement searchbar = WebDriver.FindElement(By.Id("sb_form_q"));
             searchbar.SendKeys(Keys.Control + "a");
             searchbar.SendKeys(Keys.Delete);
             searchbar.SendKeys(term);
             searchbar.SendKeys(Keys.Enter);
 
             // load the search results html
-            string resultsHtml = driver.PageSource;
+            string resultsHtml = WebDriver.PageSource;
             HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(resultsHtml);
 

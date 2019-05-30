@@ -5,22 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExDeathWPF"
         mc:Ignorable="d"
-        Title="Scraper" Height="461.111" Width="796.296">
+        Title="Scraper" Height="471.611" Width="796.296">
     <Grid Margin="0,0,2,3">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="232*"/>
+            <ColumnDefinition Width="166*"/>
+            <ColumnDefinition Width="66*"/>
             <ColumnDefinition Width="161*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Name="crawlUrl" HorizontalAlignment="Left" Height="21" Margin="21,36,0,0" TextWrapping="Wrap" Text="Enter url" VerticalAlignment="Top" Width="657" RenderTransformOrigin="0.498,0.506" Grid.ColumnSpan="2"/>
-        <Button Content="Search" Click="Button_Search" HorizontalAlignment="Left" Margin="232,36,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Height="20"/>
-
-        <DataGrid HorizontalAlignment="Left" Height="304" Margin="16,105,0,0" VerticalAlignment="Top" Width="755" Grid.ColumnSpan="2"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="21,10,0,0" Width="76" Height="16" Text="Base Url"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="84,43,0,0" Height="16" Width="0"/>
-        <CheckBox Content="Download HTML" IsChecked="{Binding dlHtml}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,64,0,0" Height="15" Width="109"/>
-        <CheckBox Content="Download Images" IsChecked="{Binding dlImage}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="143,64,0,0" Height="15" Width="115"/>
-        <CheckBox Content="Use Keywords" IsChecked="{Binding useKeywords}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="272,64,0,0" Height="15" Width="94"/>
-        <CheckBox Content="Search" IsChecked="{Binding useSearch}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="384,64,0,0" Height="15" Width="55"/>
-        <TextBox HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" Text="Regex for Search" VerticalAlignment="Top" Width="120" Margin="0,64,0,0" TextChanged="TextBox_TextChanged" Grid.Column="1"/>
+        <Grid>
+            <TabControl Margin="0,0,-451,0">
+                <TabItem DataContext ="{Binding Children[0]}" Width="100" Height="30" Header="CRAWLER">
+                    <Grid>
+                        <Label Content="Base Url" Margin="10,0,692,358"/>
+                        <TextBox Name="crawlUrl" HorizontalAlignment="Left" Height="21" Margin="10,31,0,0" TextWrapping="Wrap" Text="Enter url" VerticalAlignment="Top" Width="673" RenderTransformOrigin="0.498,0.506"/>
+                        <Button Content="Search" Click="Button_Search" HorizontalAlignment="Left" Margin="688,31,0,0" VerticalAlignment="Top" Width="75" Height="20"/>
+                        <Grid Margin="10,57,333,301">
+                            <CheckBox Content="HTML" IsChecked="{Binding dlHtml}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="59" Margin="136,6,0,0"/>
+                            <CheckBox Content="Images" IsChecked="{Binding dlImage}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="69,6,0,0" Height="15" Width="67"/>
+                            <CheckBox Content="Use Keywords" IsChecked="{Binding useKeywords}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="195,6,0,0" Height="15" Width="94"/>
+                            <TextBox HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" Text="Regex for Search" VerticalAlignment="Top" Width="120" Margin="294,4,0,0" TextChanged="TextBox_TextChanged"/>
+                            <Label Content="Download:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem DataContext ="{Binding Children[1]}" Width="100" Height="30" Header="SEARCH">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="26*"/>
+                            <ColumnDefinition Width="363*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Search Terms (Comma Separated)&#xD;&#xA;" Margin="10,0,562,358" Grid.ColumnSpan="2"/>
+                        <TextBox Name="searchTerm" HorizontalAlignment="Left" Height="63" Margin="168,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="392" RenderTransformOrigin="0.498,0.506" Grid.Column="1"/>
+                        <Button Content="Search" Click="Button_Search" HorizontalAlignment="Left" Margin="590,22,0,0" VerticalAlignment="Top" Width="76" Height="20" Grid.Column="1"/>
+                        <Label Content="Engine" Margin="10,31,692,333" Grid.ColumnSpan="2"/>
+                        <CheckBox Content="Bing" IsChecked="{Binding engineBing}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53.5,37,0,0" Height="15" Width="67" Grid.Column="1"/>
+                        <DataGrid Name="dgSearchResults" AlternatingRowBackground="AliceBlue" HorizontalAlignment="Left" Height="343" VerticalAlignment="Top" Width="757" Margin="10,72,0,-15" Grid.ColumnSpan="2"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
     </Grid>
 </Window>
