@@ -30,12 +30,18 @@ namespace ExDeath
                 HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
                 htmlDoc.LoadHtml(source);
 
-                List<string> resultsLinks = htmlDoc.DocumentNode
-                                   .SelectNodes("//li[@class='b_algo']/h2/a ")
-                                   .Select(a => a.Attributes["href"].Value)
-                                   .ToList();
-
-                return resultsLinks;
+                try
+                {
+                    List<string> resultsLinks = htmlDoc.DocumentNode
+                                                       .SelectNodes("//li[@class='b_algo']/h2/a ")
+                                                       .Select(a => a.Attributes["href"].Value)
+                                                       .ToList();
+                    return resultsLinks;
+                }
+                catch
+                {
+                    return new List<string>() { "none" };
+                }
             }
         }
     }
