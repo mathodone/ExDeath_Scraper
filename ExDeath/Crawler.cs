@@ -52,6 +52,7 @@ namespace ExDeath
         static string downloadsDirectory;
 
         public Crawler(string url, bool usekeywords = false, int maxConnections = 2, int depth = 2, bool dlHtml = false, bool dlImage = false, bool useSearch = false, string searchTerm = "")
+
         {
             maxDepth = depth;
             crawlQueue = new ConcurrentQueue<Tuple<Uri, int>>();
@@ -64,6 +65,7 @@ namespace ExDeath
             downloadImage = dlImage;
             searchPages = useSearch;
             this.searchTerm = searchTerm;
+
 
             // max # of connections allowed to an IP in parallel
             // if too high, the program will be throttled/blocked. best to use 2 for most sites.
@@ -121,7 +123,9 @@ namespace ExDeath
                     if (!seen.ContainsKey(fixedUri))
                     {
                         seen.TryAdd(fixedUri,0);
+
                         crawlQueue.Enqueue(Tuple.Create(fixedUri, level + 1));
+                        crawlQueue.Enqueue(fixedUri);
                     }
                 }
 

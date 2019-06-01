@@ -10,6 +10,7 @@ using System.Net.Http;
 using HtmlAgilityPack;
 using System.Collections.Concurrent;
 
+
 namespace ExDeath
 {
     // all download logic will be moved in here eventually
@@ -24,7 +25,6 @@ namespace ExDeath
 
         public static async Task DownloadImages(string html, Uri url, string downloadsDirectory)
         {
-
             // parse HTML
             HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
@@ -35,6 +35,9 @@ namespace ExDeath
                                         .Select(img => img.Attributes["src"].Value)
                                         .ToList();
 
+            string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
+            directory = directory.Substring(0, directory.LastIndexOf('/'));
+            Directory.CreateDirectory(directory);
             WebClient client = new WebClient();
 
             //loop through all imgs and save to directory
