@@ -11,9 +11,6 @@ Flexible C# Scraping Application
 * csv and xlsx handling.
 
 ### Long Term
-
-* Get GUI app running (exists in ExDeathWPF solution)
 * Implement url classification feature
-* Move download logic from Crawler.cs to Downloader.cs
 * Begin implementing scrapers for popular sites (linkedin, etc).
 * Element picker functionality.
