@@ -16,6 +16,7 @@ namespace ExDeath
     // all download logic will be moved in here eventually
     class Downloader
     {
+        //TODO: empty dict after each crawl or else all memory will be used up
         static ConcurrentDictionary<Uri, string> seen = new ConcurrentDictionary<Uri, string>();
         static Downloader()
         {
@@ -44,8 +45,7 @@ namespace ExDeath
             {
                 string imgName = imgLink.Substring(imgLink.LastIndexOf('/') + 1);
                 Uri absoluteUrl = new Uri(url, imgLink);
-                // if we see the same img, then just make a new copy of it. 
-                // faster to copy than to DL it again
+                // if we see the same img, then just make a new copy of it. faster than DLing it again
                 if (!seen.ContainsKey(absoluteUrl))
                 {
                     await client.DownloadFileTaskAsync(absoluteUrl, $"{directory}/{imgName}");
