@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Http;
 using HtmlAgilityPack;
+using System.Collections.Concurrent;
 
 
 namespace ExDeath
@@ -15,6 +16,7 @@ namespace ExDeath
     // all download logic will be moved in here eventually
     class Downloader
     {
+        static ConcurrentDictionary<Uri, string> seen = new ConcurrentDictionary<Uri, string>();
         static Downloader()
         {
             return;
@@ -42,8 +44,17 @@ namespace ExDeath
             {
                 string imgName = imgLink.Substring(imgLink.LastIndexOf('/') + 1);
                 Uri absoluteUrl = new Uri(url, imgLink);
-
-                await client.DownloadFileTaskAsync(absoluteUrl, $"{directory}/{imgName}");
+                // if we see the same img, then just make a new copy of it. 
+                // faster to copy than to DL it again
+                if (!seen.ContainsKey(absoluteUrl))
+                {
+                    await client.DownloadFileTaskAsync(absoluteUrl, $"{directory}/{imgName}");
+                    seen.TryAdd(absoluteUrl, $"{directory}/{imgName}");
+                }
+                else
+                {
+                    File.Copy(seen[absoluteUrl], $"{directory}/{imgName}");
+                }
             }
         }
 
