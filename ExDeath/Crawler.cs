@@ -125,7 +125,7 @@ namespace ExDeath
                         seen.TryAdd(fixedUri,0);
 
                         crawlQueue.Enqueue(Tuple.Create(fixedUri, level + 1));
-                        crawlQueue.Enqueue(fixedUri);
+                        //crawlQueue.Enqueue(fixedUri);
                     }
                 }
 
@@ -199,10 +199,6 @@ namespace ExDeath
 
             // create new directory to store files
             DirectoryInfo siteDirectory = Directory.CreateDirectory(downloadsDirectory);
-            if (downloadImage)
-            {
-                Directory.CreateDirectory($"{downloadsDirectory}/images");
-            }
 
             var runningTasks = new HashSet<Task> { ProcessUrlAsync(Tuple.Create(uri,0), token) };
             var maxTasks = ServicePointManager.DefaultConnectionLimit;

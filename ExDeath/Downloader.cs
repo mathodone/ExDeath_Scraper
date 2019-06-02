@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Http;
 using HtmlAgilityPack;
-using System.Collections.Concurrent;
 
 
 namespace ExDeath
@@ -16,8 +15,6 @@ namespace ExDeath
     // all download logic will be moved in here eventually
     class Downloader
     {
-
-        static ConcurrentDictionary<Uri, byte> seen = new ConcurrentDictionary<Uri, byte>();
         static Downloader()
         {
             return;
@@ -36,7 +33,7 @@ namespace ExDeath
                                         .ToList();
 
             string directory = $"{downloadsDirectory}/{url.AbsolutePath.Substring(1)}";
-            directory = directory.Substring(0, directory.LastIndexOf('/'));
+            //directory = directory.Substring(0, directory.LastIndexOf('/'));
             Directory.CreateDirectory(directory);
             WebClient client = new WebClient();
 
@@ -45,11 +42,8 @@ namespace ExDeath
             {
                 string imgName = imgLink.Substring(imgLink.LastIndexOf('/') + 1);
                 Uri absoluteUrl = new Uri(url, imgLink);
-                if (!seen.ContainsKey(absoluteUrl))
-                {
-                    await client.DownloadFileTaskAsync(absoluteUrl, $"{downloadsDirectory}/images/{imgName}");
-                    seen.TryAdd(absoluteUrl, 0);
-                }
+
+                await client.DownloadFileTaskAsync(absoluteUrl, $"{directory}/{imgName}");
             }
         }
 
