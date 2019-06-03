@@ -186,19 +186,19 @@ namespace ExDeath
         public async Task Run()
         {
             // clear log file if exists, otherwise make new log file
-            File.WriteAllText("../../logs/crawl_log.txt", string.Empty);
-            Logging.StartingCrawl(uri.ToString());
+            //File.WriteAllText("../../logs/crawl_log.txt", string.Empty);
+            //Logging.StartingCrawl(uri.ToString());
 
             // generate our CancellationTokens
             CancellationTokenSource source = new CancellationTokenSource();
             CancellationToken token = source.Token;
 
             // create new directory to store files
-            DirectoryInfo siteDirectory = Directory.CreateDirectory(downloadsDirectory);
-            if (downloadImage)
-            {
-                Directory.CreateDirectory($"{downloadsDirectory}/images");
-            }
+            //DirectoryInfo siteDirectory = Directory.CreateDirectory(downloadsDirectory);
+            //if (downloadImage)
+            //{
+            //    Directory.CreateDirectory($"{downloadsDirectory}/images");
+            //}
 
             var runningTasks = new HashSet<Task> { ProcessUrlAsync(Tuple.Create(uri,0), token) };
             var maxTasks = ServicePointManager.DefaultConnectionLimit;
