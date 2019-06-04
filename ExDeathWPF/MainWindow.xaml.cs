@@ -31,10 +31,17 @@ namespace ExDeathWPF
         public bool DlImage { get; set; }
         public bool UseKeywords { get; set; }
         public bool UseSearch { get; set; }
-        
+
+        // regex options
+        private const RegexOptions _options = RegexOptions.Compiled | RegexOptions.IgnoreCase;
+        Regex linkRx = new Regex(@"\S*(directory|district|administration|administrative|staff|curriculum|instruction|board|education|BOE|contact|contacts)|(our (district|administration|staff))|(curriculum (&|and|&amp;) instruction)", _options);
+        Regex directorRx = new Regex(@"(((director|supervisor|superintendent) of curriculum (&|and|&amp;) instruction)|(curriculum (development|supervisor)))|((supervisor|director|superintendent) of (curriculum|c&i))|(curriculum (&|and|&amp;) instruction)|(of (curriculum|instruction))+", _options);
+        Regex emailRx = new Regex(@"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", _options);
+        Regex phoneRx = new Regex(@"(?:\(\d{3}\)\s*|(?=[\d.-]{10,20})\b\d{3}[-.]?)\d{3}[-.]?\d{4}( *x\d{4})?\b", _options);
+
+
         // search results from search tab
         public ObservableCollection<SearchResult> SearchResults { get; private set; }
-
         public ObservableCollection<CrawlResult> CrawlResults { get; private set; }
         public ObservableCollection<CrawlQueueResult> CrawlQueueResults { get; private set; }
 
@@ -68,14 +75,13 @@ namespace ExDeathWPF
         {
             public string BaseUrl { get; set; }
             public string FoundUrl { get; set; }
-            public string InnerText { get; set; }
+            public string Match { get; set; }
             public string Email { get; set; }
             public string Phone { get; set; }
         }
 
         public class CrawlQueueResult
         {
-            public string BaseUrl { get; set; }
             public string QueuedUrl { get; set; }
         }
 
@@ -165,132 +171,179 @@ namespace ExDeathWPF
             CrawlQueueResults.Clear();
             dgCrawlQueue.ItemsSource = CrawlQueueResults;
 
-            string baseUrl = crawlUrl.Text;
+            // input urls
+            string[] baseUrls = crawlUrl.Text.Split(',');
 
-            await Task.Run(() => PerformCrawl(baseUrl));
+            await Task.Run(() => PerformCrawl(baseUrls));
         }
 
-        private async void PerformCrawl(string baseUrl)
+        private async void PerformCrawl(string[] baseUrls)
         {
-            Uri url = new Uri(baseUrl);
             var client = new HttpClient();
-            HashSet<string> seen = new HashSet<string>();
-            Queue<Uri> crawlQ = new Queue<Uri>();
-            crawlQ.Enqueue(url);
-
             client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36");
 
-            while (crawlQ.Count > 0)
+            HashSet<string> seen = new HashSet<string>();
+            Queue<Uri> crawlQ = new Queue<Uri>();
+
+            foreach (string baseUrl in baseUrls)
             {
-                string nextUrl = crawlQ.Dequeue().ToString();
+                Uri url = new Uri(baseUrl);
+                crawlQ.Enqueue(url);
+                seen.Add(url.ToString());
 
-                using (var response = await client.GetAsync(nextUrl))
+                while (crawlQ.Count > 0)
                 {
-                    try
+                    string currentUrl = crawlQ.Dequeue().ToString();
+                    Console.WriteLine($"visiting {currentUrl}");
+
+                    using (var response = await client.GetAsync(currentUrl))
                     {
-                        response.EnsureSuccessStatusCode();
-                        var source = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine(response.StatusCode);
-
-                        HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
-                        htmlDoc.LoadHtml(source);
-
-                        Regex rx = new Regex(@"\S*(directory|administration|information|department|curriculum|director|instruction|administrative|staff)", RegexOptions.IgnoreCase);
-
-                        List<string> pageLinks = htmlDoc.DocumentNode
-                                            .Descendants("a")
-                                            .Where(a => rx.IsMatch(a.InnerText))
-                                            .Select(a =>  a.GetAttributeValue("href", null))
-                                            .ToList();
-
-                        foreach (string link in pageLinks)
+                        try
                         {
-                            string fixedLink;
+                            response.EnsureSuccessStatusCode();
+                            string source = await response.Content.ReadAsStringAsync();
 
-                            if (!link.StartsWith("http"))
+                            HtmlDocument htmlDoc = new HtmlDocument();
+                            htmlDoc.LoadHtml(source);
+
+                            // our regex expressions
+                            // regex to select which links we queue
+
+                            // links we add to queue
+                            HashSet<string> pageLinks = htmlDoc.DocumentNode
+                                                            .Descendants("a")
+                                                            .Where(a => linkRx.IsMatch(a.InnerText))
+                                                            .Where(a => !Regex.IsMatch(a.Attributes["href"].Value, "(.pdf|.ppt|.mp4|.mp3|.mov|.avi|.docx|.doc)"))
+                                                            .Select(a => a.GetAttributeValue("href", null))
+                                                            .ToHashSet();
+
+                            // turn relative links into absolute ones
+                            if (pageLinks.Count > 0)
                             {
-                                if (link.StartsWith("/"))
+                                foreach (string link in pageLinks)
                                 {
-                                    fixedLink = $"{url.Scheme}://{url.Host}/{link.Substring(1)}".ToLower();
+                                    string fixedLink;
+
+                                    if (!link.StartsWith("http"))
+                                    {
+                                        if (link.StartsWith("/"))
+                                        {
+                                            fixedLink = $"{url.Scheme}://{url.Host}/{link.Substring(1)}".ToLower();
+                                        }
+                                        else
+                                        {
+                                            fixedLink = $"{url.Scheme}://{url.Host}/{link}".ToLower();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        fixedLink = link.ToLower();
+                                    }
+
+                                    // only keep links within the same domain as baseUrl
+                                    if (!seen.Contains(fixedLink))
+                                    {
+                                        if (url.Host == new Uri(fixedLink).Host)
+                                        {
+                                            seen.Add(fixedLink);
+                                            crawlQ.Enqueue(new Uri(fixedLink));
+
+                                            lock (_syncLock)
+                                            {
+                                                CrawlQueueResults.Add(new CrawlQueueResult() { QueuedUrl = fixedLink });
+                                            }
+
+                                            Console.WriteLine("queued", fixedLink);
+                                        }
+                                    }
                                 }
-                                else
+                                // get the div elements that match the director title regex
+                                HashSet<string> directorMatches = htmlDoc.DocumentNode
+                                                                      .SelectNodes(".//div")
+                                                                      .Where(s => directorRx.IsMatch(s.InnerText))
+                                                                      .Select(a => a.InnerText.Trim())
+                                                                      .Select(a => Regex.Replace(a, "[ \t\r\n]+", @" ").Trim())
+                                                                      .ToHashSet();
+
+                                // substrings from the div elements that contain the desired titles
+                                HashSet<string> substringMatches = new HashSet<string>();
+
+                                // go through each match candidate and get 
+                                // the index of the regex match and grab the words
+                                // around the match
+                                if (directorMatches.Count > 0)
                                 {
-                                    fixedLink = $"{url.Scheme}://{url.Host}/{link}".ToLower();
+                                    foreach (string match in directorMatches)
+                                    {
+                                        MatchCollection collection = directorRx.Matches(match);
+
+                                        if (collection.Count > 0)
+                                        {
+                                            foreach (Match fragment in collection)
+                                            {
+
+                                                try
+                                                {
+                                                    // have to be careful if match has very few characters
+                                                    // before the match index
+                                                    string substring = (fragment.Index < 41) ? match.Substring(0, 120) : match.Substring(fragment.Index - 30, 120);
+
+                                                    if (string.IsNullOrEmpty(substring))
+                                                    {
+                                                        continue;
+                                                    }
+                                                    else
+                                                    {
+                                                        substringMatches.Add(substring);
+                                                    }
+                                                }
+                                                catch (Exception e)
+                                                {
+                                                    Console.WriteLine($"something happend {e}");
+                                                }
+
+                                            }
+                                        }
+                                    }
                                 }
+
+
+                                // update the ui
+                                foreach (string substring in substringMatches)
+                                {
+                                    lock (_syncLock)
+                                    {
+                                        CrawlResults.Add(
+                                            new CrawlResult()
+                                            {
+                                                BaseUrl = url.ToString(),
+                                                FoundUrl = currentUrl.ToString(),
+                                                Match = substring,
+                                                Email = emailRx.Match(substring).ToString(),
+                                                Phone = phoneRx.Match(substring).ToString()
+                                            }
+                                        );
+                                    }
+                                }
+
+
                             }
                             else
                             {
-                                fixedLink = link.ToLower();
+                                continue;
                             }
-
-                            if (!seen.Contains(fixedLink))
-                            {
-                                if (url.Host == new Uri(fixedLink).Host)
-                                {
-                                    seen.Add(fixedLink);
-                                    crawlQ.Enqueue(new Uri(fixedLink));
-
-                                    lock (_syncLock)
-                                    {
-                                        CrawlQueueResults.Add(new CrawlQueueResult() { BaseUrl = url.ToString(), QueuedUrl = fixedLink});
-                                    }
-
-                                    Console.WriteLine("queued", fixedLink);
-                                }
-                            }
+                           
                         }
-
-                        Regex directorRx = new Regex(@"((director of curriculum (&|and|&amp;) instruction)|(curriculum development))+", RegexOptions.IgnoreCase);
-                        Regex emailRx = new Regex(@"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", RegexOptions.IgnoreCase);
-                        Regex phoneRx = new Regex(@"(?:\(\d{3}\)\s*|(?=[\d.-]{10,20})\b\d{3}[-.]?)\d{3}[-.]?\d{4}( *x\d{4})?\b", RegexOptions.IgnoreCase);
-
-
-                        List<string> directorMatches = htmlDoc.DocumentNode.SelectNodes(".//div")
-                                                        .Where(s => directorRx.IsMatch(s.InnerText))
-                                                        .Select(a => a.InnerText.Trim())
-                                                        .Select(a => Regex.Replace(a, "[ \t\r\n]+", @" ").Trim())
-                                                        .ToList();
-
-                        HashSet<string> parsedMatches = new HashSet<string>(directorMatches);
-
-                        HashSet<string> substringMatches = new HashSet<string>();
-
-                        foreach (string parsed in parsedMatches)
+                        catch (HttpRequestException e)
                         {
-                            MatchCollection collection = directorRx.Matches(parsed);
-                            
-                            foreach (Match fragment in collection)
-                            {
-                                string substring = parsed.Substring(fragment.Index-50, 150);
-                                substringMatches.Add(substring);
-                            }
-
+                            Console.WriteLine($"HttpRequestException {e} \n\n");
+                            continue;
                         }
-
-                        Console.WriteLine("test");
-
-                        foreach (string text in substringMatches)
-                        {
-                            lock (_syncLock)
-                            {
-                                CrawlResults.Add(
-                                    new CrawlResult() {
-                                        BaseUrl = url.ToString(),
-                                        FoundUrl = nextUrl.ToString(),
-                                        InnerText = text,
-                                        Email = emailRx.Match(text).ToString(),
-                                        Phone = phoneRx.Match(text).ToString()
-                                    }
-                                );
-                            }
+                        catch (Exception e)
+                        {   
+                            Console.WriteLine($"error occurred: {e} \n\n");
+                            continue;
                         }
-
-
-
-                    }
-                    catch
-                    {
-                        continue;
                     }
                 }
             }

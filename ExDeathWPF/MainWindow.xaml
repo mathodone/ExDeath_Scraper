@@ -17,34 +17,37 @@
                 <TabItem DataContext ="{Binding Children[0]}" Width="100" Height="30" Header="CRAWLER">
                     <Grid>
                         <Label Content="Base Url" Margin="10,0,692,358"/>
-                        <TextBox Name="crawlUrl" HorizontalAlignment="Left" Height="21" Margin="10,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="948" RenderTransformOrigin="0.498,0.506" TextChanged="CrawlUrl_TextChanged"/>
-                        <Button Content="Search" Click="Button_Crawl" HorizontalAlignment="Left" Margin="977,31,0,0" VerticalAlignment="Top" Width="75" Height="20"/>
+                        <TextBox Name="crawlUrl" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left" Height="81" Margin="10,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="948" RenderTransformOrigin="0.498,0.506" TextChanged="CrawlUrl_TextChanged"/>
+                        <Button Content="Search" Click="Button_Crawl" HorizontalAlignment="Left" Margin="992,57,0,0" VerticalAlignment="Top" Width="75" Height="20"/>
                         <Grid Margin="10,57,333,301">
-                            <CheckBox Content="HTML" IsChecked="{Binding dlHtml}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="59" Margin="136,6,0,0"/>
-                            <CheckBox Content="Images" IsChecked="{Binding dlImage}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="69,6,0,0" Height="15" Width="67"/>
-                            <CheckBox Content="Use Keywords" IsChecked="{Binding useKeywords}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="195,6,0,0" Height="15" Width="94"/>
-                            <TextBox HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" Text="Regex for Search" VerticalAlignment="Top" Width="120" Margin="294,4,0,0" TextChanged="TextBox_TextChanged"/>
-                            <Label Content="Download:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                            <DataGrid Name="dgCrawlQueue" AlternatingRowBackground="AliceBlue" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="328" Margin="8,37,0,-276" RenderTransformOrigin="0.5,0.5"></DataGrid>
-                            <DataGrid Name="dgCrawlResults" AlternatingRowBackground="AliceBlue" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="1117" Margin="356,37,-305,-276"/>
+                            <CheckBox Content="HTML" IsChecked="{Binding dlHtml}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="59" Margin="134,73,0,0"/>
+                            <CheckBox Content="Images" IsChecked="{Binding dlImage}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,73,0,0" Height="15" Width="67"/>
+                            <CheckBox Content="Use Keywords" IsChecked="{Binding useKeywords}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="193,73,0,0" Height="15" Width="94"/>
+                            <TextBox HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" Text="Regex for Search" VerticalAlignment="Top" Width="120" Margin="292,73,0,0" TextChanged="TextBox_TextChanged"/>
+                            <Label Content="Download:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,67,0,0"/>
+                            <DataGrid Name="dgCrawlQueue" AlternatingRowBackground="AliceBlue" HorizontalAlignment="Left" Height="675" VerticalAlignment="Top" Width="328" Margin="8,112,0,-276" RenderTransformOrigin="0.5,0.5"></DataGrid>
+                            <DataGrid Name="dgCrawlResults" AlternatingRowBackground="AliceBlue" HorizontalAlignment="Left" Height="675" VerticalAlignment="Top" Width="1117" Margin="356,112,-305,-276"/>
                         </Grid>
                     </Grid>
                 </TabItem>
                 <TabItem DataContext ="{Binding Children[1]}" Width="100" Height="30" Header="SEARCH">
                     <Grid Margin="0,0,-99,0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="78*"/>
-                            <ColumnDefinition Width="206*"/>
-                            <ColumnDefinition Width="713*"/>
-                            <ColumnDefinition Width="165*"/>
+                            <ColumnDefinition Width="17*"/>
+                            <ColumnDefinition Width="32*"/>
+                            <ColumnDefinition Width="28*"/>
+                            <ColumnDefinition Width="31*"/>
+                            <ColumnDefinition Width="285*"/>
+                            <ColumnDefinition Width="988*"/>
+                            <ColumnDefinition Width="229*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Content="Search Terms (Comma Separated)&#xD;&#xA;" Margin="10,38,397.5,337" Grid.ColumnSpan="3"/>
-                        <TextBox Name="searchTerm" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left" Height="614" Margin="10,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="528" RenderTransformOrigin="0.498,0.506" Grid.ColumnSpan="3"/>
-                        <Button Content="Search" Click="Button_Search" HorizontalAlignment="Left" Margin="33,41,0,0" VerticalAlignment="Top" Width="76" Height="20" Grid.Column="2"/>
-                        <DataGrid Name="dgSearchResults" AlternatingRowBackground="AliceBlue" HorizontalAlignment="Left" Height="656" VerticalAlignment="Top" Width="491" Margin="281,33,0,0" Grid.Column="2" Grid.ColumnSpan="2"/>
-                        <ProgressBar x:Name="searchProgress" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="491" Margin="281,6,0,0" Grid.Column="2" Grid.ColumnSpan="2"/>
-                        <TextBox Name="searchFilename" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Margin="77,10,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                        <Label Content="Desired Filename:" VerticalAlignment="Top" Margin="10,6,70,0" Grid.ColumnSpan="2"/>
+                        <Label Content="Search Terms (Comma Separated)&#xD;&#xA;" Margin="10,38,397,337" Grid.ColumnSpan="6"/>
+                        <TextBox Name="searchTerm" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left" Height="614" Margin="10,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="528" RenderTransformOrigin="0.498,0.506" Grid.ColumnSpan="6"/>
+                        <Button Content="Search" Click="Button_Search" HorizontalAlignment="Left" Margin="33,41,0,0" VerticalAlignment="Top" Width="76" Height="20" Grid.Column="5"/>
+                        <DataGrid Name="dgSearchResults" AlternatingRowBackground="AliceBlue" HorizontalAlignment="Left" Height="656" VerticalAlignment="Top" Width="491" Margin="281,33,0,0" Grid.Column="5"/>
+                        <ProgressBar x:Name="searchProgress" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="491" Margin="281,6,0,0" Grid.Column="5"/>
+                        <TextBox Name="searchFilename" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Margin="77,10,0,0" Grid.Column="4" Grid.ColumnSpan="2"/>
+                        <Label Content="Desired Filename:" VerticalAlignment="Top" Margin="10,6,70,0" Grid.ColumnSpan="5"/>
                     </Grid>
                 </TabItem>
             </TabControl>
