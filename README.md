@@ -1,16 +1,13 @@
 # ExDeath_Scraper
-Flexible C# Scraping Application
+Flexible C# Scraping Application w/ GUI. The intention is to create a scraping application that is easily tailored to whatever freelance project I'm currently working on.
 
 # Todo
 
 ### Short Term
-
-* Fix relative to absolute path issue during crawling **(URGENT)**
-* Function to find search bar on a given page and search a given term.
-* Download all images from a page (similar to how html gets downloaded now)
 * csv and xlsx handling.
+* Abstract the Regex scraper into the crawler class.
 
 ### Long Term
 * Implement url classification feature
-* Begin implementing scrapers for popular sites (linkedin, etc).
+* Finish implementing linkedin scraper.
 * Element picker functionality.
