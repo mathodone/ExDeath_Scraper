@@ -6,36 +6,43 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using HtmlAgilityPack;
+using System.Net.Http;
 
 namespace ExDeath
 {
-    class Search
+    public class Search
     {
-        // gets links from first page of results
-        public static List<string> SearchBing(string term)
+        static HttpClient client;
+
+        public Search()
         {
-            IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(@"https://www.bing.com/");
+            client = new HttpClient();
+        }
 
-            string title = driver.Title;
-            string html = driver.PageSource;
-            IWebElement searchbar = driver.FindElement(By.Id("sb_form_q"));
-            searchbar.SendKeys(Keys.Control + "a");
-            searchbar.SendKeys(Keys.Delete);
-            searchbar.SendKeys(term);
-            searchbar.SendKeys(Keys.Enter);
+        // gets links from first page of results
+        public async Task<List<string>> SearchBing(string term)
+        {
+            using (var response = await client.GetAsync($"https://www.bing.com/search?q={term.Replace(' ', '+')}"))
+            {
+                response.EnsureSuccessStatusCode();
+                var source = await response.Content.ReadAsStringAsync();
 
-            // load the search results html
-            string resultsHtml = driver.PageSource;
-            HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
-            htmlDoc.LoadHtml(resultsHtml);
+                HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
+                htmlDoc.LoadHtml(source);
 
-            List<string> resultsLinks = htmlDoc.DocumentNode
-                                               .SelectNodes("//li[@class='b_algo']/h2/a ")
-                                               .Select(a => a.Attributes["href"].Value)
-                                               .ToList();
-
-            return resultsLinks;
+                try
+                {
+                    List<string> resultsLinks = htmlDoc.DocumentNode
+                                                       .SelectNodes("//li[@class='b_algo']/h2/a ")
+                                                       .Select(a => a.Attributes["href"].Value)
+                                                       .ToList();
+                    return resultsLinks;
+                }
+                catch
+                {
+                    return new List<string>() { "none" };
+                }
+            }
         }
     }
 }

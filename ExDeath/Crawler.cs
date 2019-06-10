@@ -27,13 +27,18 @@ namespace ExDeath
         ConcurrentDictionary<Uri, byte> seen;
 
         // list of links to crawl. we obtain this from the root url
-        ConcurrentQueue<Uri> crawlQueue;                            
+        // int = depth level
+        ConcurrentQueue<Tuple<Uri, int>> crawlQueue;                            
 
         // these are the character we split an array by
         static readonly char[] urlSplit = "/:_-#.".ToArray();
 
         // whether or not to use a keywords list
         bool useKeywords;
+
+        // if we want to search our pages for a certain term
+        bool searchPages;
+        string searchTerm;
 
         // these are the keywords we use to flag links we're interested in.
         // these are loaded from a txt file in the LoadKeywords function
@@ -46,10 +51,11 @@ namespace ExDeath
 
         static string downloadsDirectory;
 
-        public Crawler(string url, bool usekeywords = false, int maxConnections = 2, int depth = 2, bool dlHtml = false, bool dlImage = false)
+        public Crawler(string url, bool usekeywords = false, int maxConnections = 2, int depth = 2, bool dlHtml = false, bool dlImage = false, bool useSearch = false, string searchTerm = "")
+
         {
             maxDepth = depth;
-            crawlQueue = new ConcurrentQueue<Uri>();
+            crawlQueue = new ConcurrentQueue<Tuple<Uri, int>>();
             uri = new Uri(url);
             client = new HttpClient();
             seen = new ConcurrentDictionary<Uri, byte>();
@@ -57,6 +63,9 @@ namespace ExDeath
             downloadsDirectory = $"../../downloads/{uri.Host}";
             downloadHtml = dlHtml;
             downloadImage = dlImage;
+            searchPages = useSearch;
+            this.searchTerm = searchTerm;
+
 
             // max # of connections allowed to an IP in parallel
             // if too high, the program will be throttled/blocked. best to use 2 for most sites.
@@ -71,10 +80,13 @@ namespace ExDeath
         
         // gets a list of links from a given page and add them
         // to the crawlQueue
-        public async Task GenerateQueueAsync(Uri url, string html)
+        public async Task GenerateQueueAsync(Tuple<Uri, int> urlTuple, string html)
         {
             try
             {
+                var url = urlTuple.Item1;
+                var level = urlTuple.Item2;
+
                 HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
                 htmlDoc.LoadHtml(html);
 
@@ -111,24 +123,25 @@ namespace ExDeath
                     if (!seen.ContainsKey(fixedUri))
                     {
                         seen.TryAdd(fixedUri,0);
-                        crawlQueue.Enqueue(fixedUri);
 
-                        //TODO: add fuzzy matching for keywords and/or regex pattern matching
+                        crawlQueue.Enqueue(Tuple.Create(fixedUri, level + 1));
+                        //crawlQueue.Enqueue(fixedUri);
                     }
                 }
 
-                Logging.GeneratedQueue(uri.ToString());
+                Logging.GeneratedQueue(url.ToString());
             }
             catch (HttpRequestException e)
             {
                 Console.WriteLine("Exception: ", e);
-                Logging.FailedQueue(uri.ToString());
+                Logging.FailedQueue(urlTuple.Item1.ToString());
             }
         }
 
-        // download HTML of a page
-        private async Task ProcessUrlAsync(Uri url, CancellationToken cancellationToken)
+        // process a url from the queue
+        public async Task ProcessUrlAsync(Tuple<Uri, int> urlTuple, CancellationToken cancellationToken)
         {
+            var url = urlTuple.Item1; 
             Logging.ProcessingNewUrl(url.ToString());
 
             using (var response = await client.GetAsync(url, cancellationToken))
@@ -136,9 +149,12 @@ namespace ExDeath
                 response.EnsureSuccessStatusCode();
                 var source = await response.Content.ReadAsStringAsync();
 
-                // get all links from the page for queue
-                await GenerateQueueAsync(url, source);
-                Logging.GeneratedQueue(url.ToString());
+
+                if (searchPages)
+                {
+                    IEnumerable<HtmlNode> nodes = Sift.SearchPage(source, searchTerm);
+                    Console.WriteLine();
+                }
 
                 if (downloadHtml)
                 {
@@ -150,28 +166,20 @@ namespace ExDeath
                     // save all images to file
                     await Downloader.DownloadImages(source, url, downloadsDirectory);
                 }
+
+                // get all links from the page for queue
+                if (urlTuple.Item2 < maxDepth)
+                {
+                    await GenerateQueueAsync(urlTuple, source);
+                }
             }
 
             return;
         }
 
-        // create child with 1 less depth
-        // TODO: clean up dead children
-        //public async Task Spawn(string url)
-        //{
-        //    await ProcessUrlAsync(url);
-        //    if (maxDepth > 1)
-        //    {
-        //        Crawler crawler = new Crawler(url, depth: maxDepth - 1, 
-        //                                    usekeywords: useKeywords, 
-        //                                    maxConnections: ServicePointManager.DefaultConnectionLimit);
-        //        await crawler.Run();
-        //    }
-        //}
-
         private Task TryProcessQueue(CancellationToken cancellationToken)
         {
-            if (crawlQueue.TryDequeue(out Uri poppedUri))
+            if (crawlQueue.TryDequeue(out Tuple<Uri, int> poppedUri))
             {
                 return ProcessUrlAsync(poppedUri, cancellationToken);
             }
@@ -192,7 +200,7 @@ namespace ExDeath
             // create new directory to store files
             DirectoryInfo siteDirectory = Directory.CreateDirectory(downloadsDirectory);
 
-            var runningTasks = new HashSet<Task> { ProcessUrlAsync(uri, token) };
+            var runningTasks = new HashSet<Task> { ProcessUrlAsync(Tuple.Create(uri,0), token) };
             var maxTasks = ServicePointManager.DefaultConnectionLimit;
 
             void AddProcessTask()
@@ -223,22 +231,6 @@ namespace ExDeath
                     AddProcessTask();
                 }
             }
-
-            //while (runningTasks.Any())
-            //{
-            //    var firstCompletedTask = await Task.WhenAny(runningTasks);
-            //    runningTasks.Remove(firstCompletedTask);
-
-            //    // if we still have pages to crawl and connections available
-            //    // TODO: manage request delays and maximum connections per domain
-            //    while (crawlQueue.Any() && runningTasks.Count < ServicePointManager.DefaultConnectionLimit)
-            //    {
-            //        crawlQueue.TryDequeue(out Uri url);
-            //        // create recursive child on each crawlQueue
-            //        runningTasks.Add(Task.Run(() => Spawn(url)));
-            //    }
-            //}
-            //await Task.WhenAll(runningTasks);
 
             Logging.CrawlFinished(uri.ToString());
             return;

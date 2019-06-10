@@ -1,18 +1,2 @@
-[5/14/2019 12:57:22 PM]  Starting Crawl                          http://books.toscrape.com/
-[5/14/2019 12:57:22 PM]  Processing new page                     http://books.toscrape.com/
-[5/14/2019 12:57:23 PM]  Generated Queue                         http://books.toscrape.com/
-[5/14/2019 12:57:23 PM]  Generated Queue                         http://books.toscrape.com/
-[5/14/2019 12:57:23 PM]  Processing new page                     http://books.toscrape.com/index.html
-[5/14/2019 12:57:23 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books_1/index.html
-[5/14/2019 12:57:23 PM]  Generated Queue                         http://books.toscrape.com/
-[5/14/2019 12:57:23 PM]  Generated Queue                         http://books.toscrape.com/index.html
-[5/14/2019 12:57:23 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/travel_2/index.html
-[5/14/2019 12:57:23 PM]  Generated Queue                         http://books.toscrape.com/
-[5/14/2019 12:57:23 PM]  Generated Queue                         http://books.toscrape.com/catalogue/category/books/travel_2/index.html
-[5/14/2019 12:57:23 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/mystery_3/index.html
-[5/14/2019 12:57:24 PM]  Generated Queue                         http://books.toscrape.com/
-[5/14/2019 12:57:24 PM]  Generated Queue                         http://books.toscrape.com/catalogue/category/books/mystery_3/index.html
-[5/14/2019 12:57:24 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
-[5/14/2019 12:57:24 PM]  Generated Queue                         http://books.toscrape.com/
-[5/14/2019 12:57:24 PM]  Generated Queue                         http://books.toscrape.com/catalogue/category/books_1/index.html
-[5/14/2019 12:57:24 PM]  Processing new page                     http://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+[5/20/2019 6:13:52 PM]   Starting Crawl                          http://books.toscrape.com/
+[5/20/2019 6:13:52 PM]   Processing new page                     http://books.toscrape.com/

@@ -1,0 +1,432 @@
+[5/20/2019 8:33:58 PM]   Starting Crawl                          http://books.toscrape.com/
+[5/20/2019 8:33:58 PM]   Processing new page                     http://books.toscrape.com/
+[5/20/2019 8:33:58 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:33:58 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:33:58 PM]   Processing new page                     http://books.toscrape.com/index.html
+[5/20/2019 8:33:58 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books_1/index.html
+[5/20/2019 8:33:59 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:33:59 PM]   Generated Queue                         http://books.toscrape.com/index.html
+[5/20/2019 8:33:59 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[5/20/2019 8:33:59 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:33:59 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/travel_2/index.html
+[5/20/2019 8:33:59 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[5/20/2019 8:33:59 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:33:59 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+[5/20/2019 8:33:59 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+[5/20/2019 8:33:59 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:33:59 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books_1/index.html
+[5/20/2019 8:33:59 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+[5/20/2019 8:33:59 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:33:59 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+[5/20/2019 8:33:59 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/classics_6/index.html
+[5/20/2019 8:34:00 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:00 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/classics_6/index.html
+[5/20/2019 8:34:00 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+[5/20/2019 8:34:00 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:00 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+[5/20/2019 8:34:00 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/romance_8/index.html
+[5/20/2019 8:34:00 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:00 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+[5/20/2019 8:34:00 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/romance_8/index.html
+[5/20/2019 8:34:01 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html
+[5/20/2019 8:34:01 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/childrens_11/index.html
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+[5/20/2019 8:34:01 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/religion_12/index.html
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/childrens_11/index.html
+[5/20/2019 8:34:01 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/religion_12/index.html
+[5/20/2019 8:34:01 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/music_14/index.html
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html
+[5/20/2019 8:34:01 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/default_15/index.html
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/music_14/index.html
+[5/20/2019 8:34:01 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:01 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/default_15/index.html
+[5/20/2019 8:34:01 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html
+[5/20/2019 8:34:02 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+[5/20/2019 8:34:02 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/fantasy_19/index.html
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html
+[5/20/2019 8:34:02 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/new-adult_20/index.html
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/fantasy_19/index.html
+[5/20/2019 8:34:02 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/young-adult_21/index.html
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/new-adult_20/index.html
+[5/20/2019 8:34:02 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/science_22/index.html
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/science_22/index.html
+[5/20/2019 8:34:02 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/poetry_23/index.html
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/young-adult_21/index.html
+[5/20/2019 8:34:02 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/paranormal_24/index.html
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/poetry_23/index.html
+[5/20/2019 8:34:02 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/art_25/index.html
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:02 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/paranormal_24/index.html
+[5/20/2019 8:34:02 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/psychology_26/index.html
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/art_25/index.html
+[5/20/2019 8:34:03 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/autobiography_27/index.html
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/psychology_26/index.html
+[5/20/2019 8:34:03 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/parenting_28/index.html
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/autobiography_27/index.html
+[5/20/2019 8:34:03 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/parenting_28/index.html
+[5/20/2019 8:34:03 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/humor_30/index.html
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html
+[5/20/2019 8:34:03 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/horror_31/index.html
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/humor_30/index.html
+[5/20/2019 8:34:03 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/history_32/index.html
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/horror_31/index.html
+[5/20/2019 8:34:03 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html
+[5/20/2019 8:34:03 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/history_32/index.html
+[5/20/2019 8:34:04 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html
+[5/20/2019 8:34:04 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/business_35/index.html
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html
+[5/20/2019 8:34:04 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/biography_36/index.html
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/business_35/index.html
+[5/20/2019 8:34:04 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/thriller_37/index.html
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/biography_36/index.html
+[5/20/2019 8:34:04 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/contemporary_38/index.html
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/thriller_37/index.html
+[5/20/2019 8:34:04 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/spirituality_39/index.html
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/contemporary_38/index.html
+[5/20/2019 8:34:04 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/academic_40/index.html
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:04 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/spirituality_39/index.html
+[5/20/2019 8:34:04 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/self-help_41/index.html
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/academic_40/index.html
+[5/20/2019 8:34:05 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/historical_42/index.html
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/self-help_41/index.html
+[5/20/2019 8:34:05 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/christian_43/index.html
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/historical_42/index.html
+[5/20/2019 8:34:05 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/suspense_44/index.html
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/christian_43/index.html
+[5/20/2019 8:34:05 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/short-stories_45/index.html
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/suspense_44/index.html
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/short-stories_45/index.html
+[5/20/2019 8:34:05 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/novels_46/index.html
+[5/20/2019 8:34:05 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/health_47/index.html
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/health_47/index.html
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:05 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/novels_46/index.html
+[5/20/2019 8:34:05 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/politics_48/index.html
+[5/20/2019 8:34:05 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/cultural_49/index.html
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/politics_48/index.html
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/cultural_49/index.html
+[5/20/2019 8:34:06 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/erotica_50/index.html
+[5/20/2019 8:34:06 PM]   Processing new page                     http://books.toscrape.com/catalogue/category/books/crime_51/index.html
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/erotica_50/index.html
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/catalogue/category/books/crime_51/index.html
+[5/20/2019 8:34:06 PM]   Processing new page                     http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+[5/20/2019 8:34:06 PM]   Processing new page                     http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html
+[5/20/2019 8:34:06 PM]   Processing new page                     http://books.toscrape.com/catalogue/soumission_998/index.html
+[5/20/2019 8:34:06 PM]   Processing new page                     http://books.toscrape.com/catalogue/sharp-objects_997/index.html
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/catalogue/soumission_998/index.html
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/catalogue/sharp-objects_997/index.html
+[5/20/2019 8:34:06 PM]   Processing new page                     http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html
+[5/20/2019 8:34:06 PM]   Processing new page                     http://books.toscrape.com/catalogue/the-requiem-red_995/index.html
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/catalogue/the-requiem-red_995/index.html
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:06 PM]   Generated Queue                         http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html
+[5/20/2019 8:34:06 PM]   Processing new page                     http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+[5/20/2019 8:34:06 PM]   Processing new page                     http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html
+[5/20/2019 8:34:07 PM]   Processing new page                     http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html
+[5/20/2019 8:34:07 PM]   Processing new page                     http://books.toscrape.com/catalogue/the-black-maria_991/index.html
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html
+[5/20/2019 8:34:07 PM]   Processing new page                     http://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/catalogue/the-black-maria_991/index.html
+[5/20/2019 8:34:07 PM]   Processing new page                     http://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html
+[5/20/2019 8:34:07 PM]   Processing new page                     http://books.toscrape.com/catalogue/set-me-free_988/index.html
+[5/20/2019 8:34:07 PM]   Processing new page                     http://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/catalogue/set-me-free_988/index.html
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html
+[5/20/2019 8:34:07 PM]   Processing new page                     http://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html
+[5/20/2019 8:34:07 PM]   Processing new page                     http://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:07 PM]   Generated Queue                         http://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html
+[5/20/2019 8:34:07 PM]   Processing new page                     http://books.toscrape.com/catalogue/olio_984/index.html
+[5/20/2019 8:34:07 PM]   Processing new page                     http://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html
+[5/20/2019 8:34:08 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:08 PM]   Generated Queue                         http://books.toscrape.com/catalogue/olio_984/index.html
+[5/20/2019 8:34:08 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:08 PM]   Generated Queue                         http://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html
+[5/20/2019 8:34:08 PM]   Processing new page                     http://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html
+[5/20/2019 8:34:08 PM]   Processing new page                     http://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html
+[5/20/2019 8:34:08 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:08 PM]   Generated Queue                         http://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html
+[5/20/2019 8:34:08 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:08 PM]   Generated Queue                         http://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html
+[5/20/2019 8:34:08 PM]   Processing new page                     http://books.toscrape.com/catalogue/page-2.html
+[5/20/2019 8:34:08 PM]   Processing new page                     http://books.toscrape.com/books_1/index.html
+[5/20/2019 8:34:08 PM]   Processing new page                     http://books.toscrape.com/mystery_3/index.html
+[5/20/2019 8:34:08 PM]   Generated Queue                         http://books.toscrape.com/
+[5/20/2019 8:34:08 PM]   Generated Queue                         http://books.toscrape.com/catalogue/page-2.html
+[5/20/2019 8:34:08 PM]   Processing new page                     http://books.toscrape.com/historical-fiction_4/index.html
+[5/20/2019 8:34:08 PM]   Processing new page                     http://books.toscrape.com/sequential-art_5/index.html
+[5/20/2019 8:34:08 PM]   Processing new page                     http://books.toscrape.com/classics_6/index.html
+[5/20/2019 8:34:08 PM]   Processing new page                     http://books.toscrape.com/philosophy_7/index.html
+[5/20/2019 8:34:09 PM]   Processing new page                     http://books.toscrape.com/romance_8/index.html
+[5/20/2019 8:34:09 PM]   Processing new page                     http://books.toscrape.com/womens-fiction_9/index.html
+[5/20/2019 8:34:09 PM]   Processing new page                     http://books.toscrape.com/fiction_10/index.html
+[5/20/2019 8:34:09 PM]   Processing new page                     http://books.toscrape.com/childrens_11/index.html
+[5/20/2019 8:34:09 PM]   Processing new page                     http://books.toscrape.com/religion_12/index.html
+[5/20/2019 8:34:09 PM]   Processing new page                     http://books.toscrape.com/nonfiction_13/index.html
+[5/20/2019 8:34:09 PM]   Processing new page                     http://books.toscrape.com/music_14/index.html
+[5/20/2019 8:34:09 PM]   Processing new page                     http://books.toscrape.com/default_15/index.html
+[5/20/2019 8:34:09 PM]   Processing new page                     http://books.toscrape.com/science-fiction_16/index.html
+[5/20/2019 8:34:09 PM]   Processing new page                     http://books.toscrape.com/sports-and-games_17/index.html
+[5/20/2019 8:34:10 PM]   Processing new page                     http://books.toscrape.com/add-a-comment_18/index.html
+[5/20/2019 8:34:10 PM]   Processing new page                     http://books.toscrape.com/fantasy_19/index.html
+[5/20/2019 8:34:10 PM]   Processing new page                     http://books.toscrape.com/new-adult_20/index.html
+[5/20/2019 8:34:10 PM]   Processing new page                     http://books.toscrape.com/young-adult_21/index.html
+[5/20/2019 8:34:10 PM]   Processing new page                     http://books.toscrape.com/science_22/index.html
+[5/20/2019 8:34:10 PM]   Processing new page                     http://books.toscrape.com/poetry_23/index.html
+[5/20/2019 8:34:10 PM]   Processing new page                     http://books.toscrape.com/paranormal_24/index.html
+[5/20/2019 8:34:10 PM]   Processing new page                     http://books.toscrape.com/art_25/index.html
+[5/20/2019 8:34:10 PM]   Processing new page                     http://books.toscrape.com/psychology_26/index.html
+[5/20/2019 8:34:10 PM]   Processing new page                     http://books.toscrape.com/autobiography_27/index.html
+[5/20/2019 8:34:11 PM]   Processing new page                     http://books.toscrape.com/parenting_28/index.html
+[5/20/2019 8:34:11 PM]   Processing new page                     http://books.toscrape.com/adult-fiction_29/index.html
+[5/20/2019 8:34:11 PM]   Processing new page                     http://books.toscrape.com/humor_30/index.html
+[5/20/2019 8:34:11 PM]   Processing new page                     http://books.toscrape.com/horror_31/index.html
+[5/20/2019 8:34:11 PM]   Processing new page                     http://books.toscrape.com/history_32/index.html
+[5/20/2019 8:34:11 PM]   Processing new page                     http://books.toscrape.com/food-and-drink_33/index.html
+[5/20/2019 8:34:11 PM]   Processing new page                     http://books.toscrape.com/christian-fiction_34/index.html
+[5/20/2019 8:34:11 PM]   Processing new page                     http://books.toscrape.com/business_35/index.html
+[5/20/2019 8:34:12 PM]   Processing new page                     http://books.toscrape.com/biography_36/index.html
+[5/20/2019 8:34:12 PM]   Processing new page                     http://books.toscrape.com/thriller_37/index.html
+[5/20/2019 8:34:12 PM]   Processing new page                     http://books.toscrape.com/contemporary_38/index.html
+[5/20/2019 8:34:12 PM]   Processing new page                     http://books.toscrape.com/spirituality_39/index.html
+[5/20/2019 8:34:12 PM]   Processing new page                     http://books.toscrape.com/academic_40/index.html
+[5/20/2019 8:34:12 PM]   Processing new page                     http://books.toscrape.com/self-help_41/index.html
+[5/20/2019 8:34:13 PM]   Processing new page                     http://books.toscrape.com/historical_42/index.html
+[5/20/2019 8:34:13 PM]   Processing new page                     http://books.toscrape.com/christian_43/index.html
+[5/20/2019 8:34:13 PM]   Processing new page                     http://books.toscrape.com/suspense_44/index.html
+[5/20/2019 8:34:13 PM]   Processing new page                     http://books.toscrape.com/short-stories_45/index.html
+[5/20/2019 8:34:13 PM]   Processing new page                     http://books.toscrape.com/novels_46/index.html
+[5/20/2019 8:34:13 PM]   Processing new page                     http://books.toscrape.com/health_47/index.html
+[5/20/2019 8:34:13 PM]   Processing new page                     http://books.toscrape.com/politics_48/index.html
+[5/20/2019 8:34:13 PM]   Processing new page                     http://books.toscrape.com/cultural_49/index.html
+[5/20/2019 8:34:14 PM]   Processing new page                     http://books.toscrape.com/erotica_50/index.html
+[5/20/2019 8:34:14 PM]   Processing new page                     http://books.toscrape.com/crime_51/index.html
+[5/20/2019 8:34:14 PM]   Processing new page                     http://books.toscrape.com/its-only-the-himalayas_981/index.html
+[5/20/2019 8:34:14 PM]   Processing new page                     http://books.toscrape.com/full-moon-over-noahs-ark-an-odyssey-to-mount-ararat-and-beyond_811/index.html
+[5/20/2019 8:34:14 PM]   Processing new page                     http://books.toscrape.com/see-america-a-celebration-of-our-national-parks-treasured-sites_732/index.html
+[5/20/2019 8:34:14 PM]   Processing new page                     http://books.toscrape.com/vagabonding-an-uncommon-guide-to-the-art-of-long-term-world-travel_552/index.html
+[5/20/2019 8:34:14 PM]   Processing new page                     http://books.toscrape.com/under-the-tuscan-sun_504/index.html
+[5/20/2019 8:34:14 PM]   Processing new page                     http://books.toscrape.com/a-summer-in-europe_458/index.html
+[5/20/2019 8:34:15 PM]   Processing new page                     http://books.toscrape.com/the-great-railway-bazaar_446/index.html
+[5/20/2019 8:34:15 PM]   Processing new page                     http://books.toscrape.com/a-year-in-provence-provence-1_421/index.html
+[5/20/2019 8:34:15 PM]   Processing new page                     http://books.toscrape.com/the-road-to-little-dribbling-adventures-of-an-american-in-britain-notes-from-a-small-island-2_277/index.html
+[5/20/2019 8:34:15 PM]   Processing new page                     http://books.toscrape.com/neither-here-nor-there-travels-in-europe_198/index.html
+[5/20/2019 8:34:15 PM]   Processing new page                     http://books.toscrape.com/1000-places-to-see-before-you-die_1/index.html
+[5/20/2019 8:34:15 PM]   Processing new page                     http://books.toscrape.com/travel_2/index.html
+[5/20/2019 8:34:15 PM]   Processing new page                     http://books.toscrape.com/sharp-objects_997/index.html
+[5/20/2019 8:34:15 PM]   Processing new page                     http://books.toscrape.com/in-a-dark-dark-wood_963/index.html
+[5/20/2019 8:34:15 PM]   Processing new page                     http://books.toscrape.com/the-past-never-ends_942/index.html
+[5/20/2019 8:34:15 PM]   Processing new page                     http://books.toscrape.com/a-murder-in-time_877/index.html
+[5/20/2019 8:34:16 PM]   Processing new page                     http://books.toscrape.com/the-murder-of-roger-ackroyd-hercule-poirot-4_852/index.html
+[5/20/2019 8:34:16 PM]   Processing new page                     http://books.toscrape.com/the-last-mile-amos-decker-2_754/index.html
+[5/20/2019 8:34:16 PM]   Processing new page                     http://books.toscrape.com/that-darkness-gardiner-and-renner-1_743/index.html
+[5/20/2019 8:34:16 PM]   Processing new page                     http://books.toscrape.com/tastes-like-fear-di-marnie-rome-3_742/index.html
+[5/20/2019 8:34:16 PM]   Processing new page                     http://books.toscrape.com/a-time-of-torment-charlie-parker-14_657/index.html
+[5/20/2019 8:34:16 PM]   Processing new page                     http://books.toscrape.com/a-study-in-scarlet-sherlock-holmes-1_656/index.html
+[5/20/2019 8:34:16 PM]   Processing new page                     http://books.toscrape.com/poisonous-max-revere-novels-3_627/index.html
+[5/20/2019 8:34:16 PM]   Processing new page                     http://books.toscrape.com/murder-at-the-42nd-street-library-raymond-ambler-1_624/index.html
+[5/20/2019 8:34:16 PM]   Processing new page                     http://books.toscrape.com/most-wanted_623/index.html
+[5/20/2019 8:34:16 PM]   Processing new page                     http://books.toscrape.com/hide-away-eve-duncan-20_620/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/boar-island-anna-pigeon-19_613/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/the-widow_609/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/playing-with-fire_602/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/what-happened-on-beale-street-secrets-of-the-south-mysteries-2_506/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/the-bachelor-girls-guide-to-murder-herringford-and-watts-mysteries-1_491/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/delivering-the-truth-quaker-midwife-mystery-1_464/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/page-2.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/books/travel_2/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/books/mystery_3/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/books/historical-fiction_4/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/books/sequential-art_5/index.html
+[5/20/2019 8:34:17 PM]   Processing new page                     http://books.toscrape.com/books/classics_6/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/philosophy_7/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/romance_8/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/womens-fiction_9/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/fiction_10/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/childrens_11/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/religion_12/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/nonfiction_13/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/music_14/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/default_15/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/science-fiction_16/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/sports-and-games_17/index.html
+[5/20/2019 8:34:18 PM]   Processing new page                     http://books.toscrape.com/books/add-a-comment_18/index.html
+[5/20/2019 8:34:19 PM]   Processing new page                     http://books.toscrape.com/books/fantasy_19/index.html
+[5/20/2019 8:34:19 PM]   Processing new page                     http://books.toscrape.com/books/new-adult_20/index.html
+[5/20/2019 8:34:19 PM]   Processing new page                     http://books.toscrape.com/books/young-adult_21/index.html
+[5/20/2019 8:34:19 PM]   Processing new page                     http://books.toscrape.com/books/science_22/index.html
+[5/20/2019 8:34:19 PM]   Processing new page                     http://books.toscrape.com/books/poetry_23/index.html
+[5/20/2019 8:34:19 PM]   Processing new page                     http://books.toscrape.com/books/paranormal_24/index.html
+[5/20/2019 8:34:19 PM]   Processing new page                     http://books.toscrape.com/books/art_25/index.html
+[5/20/2019 8:34:19 PM]   Processing new page                     http://books.toscrape.com/books/psychology_26/index.html
+[5/20/2019 8:34:20 PM]   Processing new page                     http://books.toscrape.com/books/autobiography_27/index.html
+[5/20/2019 8:34:20 PM]   Processing new page                     http://books.toscrape.com/books/parenting_28/index.html
+[5/20/2019 8:34:20 PM]   Processing new page                     http://books.toscrape.com/books/adult-fiction_29/index.html
+[5/20/2019 8:34:20 PM]   Processing new page                     http://books.toscrape.com/books/humor_30/index.html
+[5/20/2019 8:34:20 PM]   Processing new page                     http://books.toscrape.com/books/horror_31/index.html
+[5/20/2019 8:34:20 PM]   Processing new page                     http://books.toscrape.com/books/history_32/index.html
+[5/20/2019 8:34:20 PM]   Processing new page                     http://books.toscrape.com/books/food-and-drink_33/index.html
+[5/20/2019 8:34:20 PM]   Processing new page                     http://books.toscrape.com/books/christian-fiction_34/index.html
+[5/20/2019 8:34:20 PM]   Processing new page                     http://books.toscrape.com/books/business_35/index.html
+[5/20/2019 8:34:20 PM]   Processing new page                     http://books.toscrape.com/books/biography_36/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/thriller_37/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/contemporary_38/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/spirituality_39/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/academic_40/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/self-help_41/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/historical_42/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/christian_43/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/suspense_44/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/short-stories_45/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/novels_46/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/health_47/index.html
+[5/20/2019 8:34:21 PM]   Processing new page                     http://books.toscrape.com/books/politics_48/index.html
+[5/20/2019 8:34:22 PM]   Processing new page                     http://books.toscrape.com/books/cultural_49/index.html
+[5/20/2019 8:34:22 PM]   Processing new page                     http://books.toscrape.com/books/erotica_50/index.html
+[5/20/2019 8:34:22 PM]   Processing new page                     http://books.toscrape.com/books/crime_51/index.html
+[5/20/2019 8:34:22 PM]   Processing new page                     http://books.toscrape.com/a-light-in-the-attic_1000/index.html
+[5/20/2019 8:34:22 PM]   Processing new page                     http://books.toscrape.com/tipping-the-velvet_999/index.html
+[5/20/2019 8:34:22 PM]   Processing new page                     http://books.toscrape.com/soumission_998/index.html
+[5/20/2019 8:34:22 PM]   Processing new page                     http://books.toscrape.com/sapiens-a-brief-history-of-humankind_996/index.html
+[5/20/2019 8:34:22 PM]   Processing new page                     http://books.toscrape.com/the-requiem-red_995/index.html
+[5/20/2019 8:34:22 PM]   Processing new page                     http://books.toscrape.com/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+[5/20/2019 8:34:22 PM]   Processing new page                     http://books.toscrape.com/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/the-black-maria_991/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/starving-hearts-triangular-trade-trilogy-1_990/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/shakespeares-sonnets_989/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/set-me-free_988/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/rip-it-up-and-start-again_986/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/olio_984/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html
+[5/20/2019 8:34:23 PM]   Processing new page                     http://books.toscrape.com/libertarianism-for-beginners_982/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/forever-and-forever-the-courtship-of-henry-longfellow-and-fanny-appleton_894/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/a-flight-of-arrows-the-pathfinders-2_876/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/the-house-by-the-lake_846/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/mrs-houdini_821/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/the-marriage-of-opposites_759/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/glory-over-everything-beyond-the-kitchen-house_696/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/love-lies-and-spies_622/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/a-paris-apartment_612/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/lilac-girls_597/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/the-constant-princess-the-tudor-court-1_493/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/the-invention-of-wings_448/index.html
+[5/20/2019 8:34:24 PM]   Processing new page                     http://books.toscrape.com/world-without-end-the-pillars-of-the-earth-2_420/index.html
+[5/20/2019 8:34:25 PM]   Processing new page                     http://books.toscrape.com/the-passion-of-dolssa_351/index.html
+[5/20/2019 8:34:25 PM]   Processing new page                     http://books.toscrape.com/girl-with-a-pearl-earring_322/index.html
+[5/20/2019 8:34:25 PM]   Processing new page                     http://books.toscrape.com/voyager-outlander-3_299/index.html
+[5/20/2019 8:34:25 PM]   Processing new page                     http://books.toscrape.com/the-red-tent_273/index.html
+[5/20/2019 8:34:25 PM]   Processing new page                     http://books.toscrape.com/the-last-painting-of-sara-de-vos_259/index.html
+[5/20/2019 8:34:25 PM]   Processing new page                     http://books.toscrape.com/the-guernsey-literary-and-potato-peel-pie-society_253/index.html
+[5/20/2019 8:34:25 PM]   Processing new page                     http://books.toscrape.com/girl-in-the-blue-coat_160/index.html
+[5/20/2019 8:34:25 PM]   Processing new page                     http://books.toscrape.com/the-secret-garden_413/index.html
+[5/20/2019 8:34:25 PM]   Processing new page                     http://books.toscrape.com/the-metamorphosis_409/index.html
+[5/20/2019 8:34:26 PM]   Processing new page                     http://books.toscrape.com/the-pilgrims-progress_353/index.html
+[5/20/2019 8:34:26 PM]   Processing new page                     http://books.toscrape.com/the-hound-of-the-baskervilles-sherlock-holmes-5_348/index.html
+[5/20/2019 8:34:26 PM]   Processing new page                     http://books.toscrape.com/little-women-little-women-1_331/index.html
+[5/20/2019 8:34:26 PM]   Processing new page                     http://books.toscrape.com/gone-with-the-wind_324/index.html
+[5/20/2019 8:34:26 PM]   Processing new page                     http://books.toscrape.com/candide_316/index.html
+[5/20/2019 8:34:26 PM]   Processing new page                     http://books.toscrape.com/animal-farm_313/index.html
+[5/20/2019 8:34:26 PM]   Processing new page                     http://books.toscrape.com/wuthering-heights_307/index.html
+[5/20/2019 8:34:26 PM]   Processing new page                     http://books.toscrape.com/the-picture-of-dorian-gray_270/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/the-complete-stories-and-poems-the-works-of-edgar-allan-poe-cameo-edition_238/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/beowulf_126/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/and-then-there-were-none_119/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/the-story-of-hong-gildong_84/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/the-little-prince_72/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/sense-and-sensibility_49/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/of-mice-and-men_37/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/emma_17/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/alice-in-wonderland-alices-adventures-in-wonderland-1_5/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/tsubasa-world-chronicle-2-tsubasa-world-chronicle-2_949/index.html
+[5/20/2019 8:34:27 PM]   Processing new page                     http://books.toscrape.com/this-one-summer_947/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/the-nameless-city-the-nameless-city-1_940/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/saga-volume-5-saga-collected-editions-5_923/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/rat-queens-vol-3-demons-rat-queens-collected-editions-11-15_921/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/princess-jellyfish-2-in-1-omnibus-vol-01-princess-jellyfish-2-in-1-omnibus-1_920/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/pop-gun-war-volume-1-gift_918/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/patience_916/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/outcast-vol-1-a-darkness-surrounds-him-outcast-1_915/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/orange-the-complete-collection-1-orange-the-complete-collection-1_914/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/lumberjanes-vol-2-friendship-to-the-max-lumberjanes-5-8_907/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/lumberjanes-vol-1-beware-the-kitten-holy-lumberjanes-1-4_906/index.html
+[5/20/2019 8:34:28 PM]   Processing new page                     http://books.toscrape.com/lumberjanes-vol-3-a-terrible-plan-lumberjanes-9-12_905/index.html
+[5/20/2019 8:34:29 PM]   Processing new page                     http://books.toscrape.com/i-hate-fairyland-vol-1-madly-ever-after-i-hate-fairyland-compilations-1-5_899/index.html
+[5/20/2019 8:34:29 PM]   Processing new page                     http://books.toscrape.com/i-am-a-hero-omnibus-volume-1_898/index.html
+[5/20/2019 8:34:29 PM]   Processing new page                     http://books.toscrape.com/giant-days-vol-2-giant-days-5-8_895/index.html
+[5/20/2019 8:34:29 PM]   Processing new page                     http://books.toscrape.com/danganronpa-volume-1_889/index.html
+[5/20/2019 8:34:29 PM]   Processing new page                     http://books.toscrape.com/codename-baboushka-volume-1-the-conclave-of-death_887/index.html
+[5/20/2019 8:34:29 PM]   Processing new page                     http://books.toscrape.com/camp-midnight_886/index.html
+[5/20/2019 8:34:29 PM]   Processing new page                     http://books.toscrape.com/sophies-world_966/index.html
