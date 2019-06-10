@@ -1,19 +1,21 @@
 # ExDeath_Scraper
-Flexible C# Scraping Application
+Flexible C# Scraping Application w/ GUI. The intention is to create a scraping application that is easily tailored to whatever freelance project I'm currently working on.
+
+## Features
+* GUI
+* Bing scraper
+* Async crawler w/ queue
+
+Still in the alpha stage of development, do not attempt to use this unless you feel like hooking all the stuff up before you start crawling.
 
 # Todo
 
 ### Short Term
-
-* Fix relative to absolute path issue during crawling **(URGENT)**
-* Function to find search bar on a given page and search a given term.
-* Download all images from a page (similar to how html gets downloaded now)
 * csv and xlsx handling.
+* Abstract the Regex scraper into the crawler class.
+* Implement url classifier
 
 ### Long Term
-
-* Get GUI app running (exists in ExDeathWPF solution)
-* Implement url classification feature
-* Move download logic from Crawler.cs to Downloader.cs
-* Begin implementing scrapers for popular sites (linkedin, etc).
+* Create a priority queue based on the url classification model
+* Finish implementing linkedin scraper.
 * Element picker functionality.
