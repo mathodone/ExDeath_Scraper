@@ -37,7 +37,7 @@ namespace ExDeathWPF
         Regex linkRx = new Regex(@"\S*(directory|district|administration|administrative|administrator|administrators|staff|curriculum|guidance|counseling|instruction|board|education|BOE|contact|contacts)|(our (district|administration|staff))|(curriculum (&|and|&amp;) instruction)|((assistant) (superintendent))|(chief academic officer)|(CAO)|(C&I)|(C & I)|(Chief Academic Officer)|((central|main) (office|administration))|(staff directory)", _options);
         Regex directorRx = new Regex(@"(((director|supervisor|superintendent) (of|for) curriculum (&|and|&amp;) instruction)|(curriculum (development|director|supervisor|coordinator)))|((supervisor|director|superintendent) (of|for) (curriculum|instruction))|(curriculum (&|and|&amp;) instruction)|((of|for) (curriculum|instruction))|(assistant superintendent)|(chief academic officer)|(CAO)|(C&I)|(C & I)+", _options);
         Regex emailRx = new Regex(@"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", _options);
-        Regex phoneRx = new Regex(@"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|([0-9]{3}[ .-][0-9]{3}[ .-][0-9]{4})", _options);
+        Regex phoneRx = new Regex(@"(1 |\+1 )?[ .-]?(\([0-9]{3}\) ?|[0-9]{3} ?)[ .-]?[0-9]{3}[ .-][0-9]{4}[ ]?(( |x|ext|ext.|extension|#){1}[ ]?([0-9]){1,7}){0,1}", _options);
 
 
         // search results from search tab
@@ -45,7 +45,7 @@ namespace ExDeathWPF
         public ObservableCollection<CrawlResult> CrawlResults { get; private set; }
         public ObservableCollection<CrawlQueueResult> CrawlQueueResults { get; private set; }
 
-        // lock object for synchronization
+        // lock for synchronization
         private readonly static object _syncLock = new object();
 
         class MainViewModel
@@ -156,8 +156,8 @@ namespace ExDeathWPF
                     await outputFile.FlushAsync();
                 }
 
+                // self throttle
                 System.Threading.Thread.Sleep(2000);
-                
             }
 
             Console.WriteLine("Search Complete");
@@ -201,156 +201,118 @@ namespace ExDeathWPF
                     {
                         using (var response = await client.GetAsync(currentUrl))
                         {
-                            try
+                            response.EnsureSuccessStatusCode();
+                            string source = await response.Content.ReadAsStringAsync();
+
+                            HtmlDocument htmlDoc = new HtmlDocument();
+                            htmlDoc.LoadHtml(source);
+
+                            // our regex expressions
+                            // regex to select which links we queue
+
+                            var ALLLINKS = htmlDoc.DocumentNode.Descendants("a");
+
+                            // links we add to queue
+                            HashSet<string> pageLinks = htmlDoc.DocumentNode
+                                                            .Descendants("a")
+                                                            .Where(a => linkRx.IsMatch(a.InnerText))
+                                                            .Where(a => !Regex.IsMatch(a.Attributes["href"].Value, "(.pdf|.ppt|.mp4|.mp3|.mov|.avi|.docx|.doc|.zip|.rar|.wmv|.swf)", _options))
+                                                            .Select(a => a.GetAttributeValue("href", null))
+                                                            .ToHashSet();
+
+                            // turn relative links into absolute ones
+                            if (pageLinks.Count > 0)
                             {
-                                response.EnsureSuccessStatusCode();
-                                string source = await response.Content.ReadAsStringAsync();
-
-                                HtmlDocument htmlDoc = new HtmlDocument();
-                                htmlDoc.LoadHtml(source);
-
-                                // our regex expressions
-                                // regex to select which links we queue
-
-                                var ALLLINKS = htmlDoc.DocumentNode.Descendants("a");
-
-                                // links we add to queue
-                                HashSet<string> pageLinks = htmlDoc.DocumentNode
-                                                                .Descendants("a")
-                                                                .Where(a => linkRx.IsMatch(a.InnerText))
-                                                                .Where(a => !Regex.IsMatch(a.Attributes["href"].Value, "(.pdf|.ppt|.mp4|.mp3|.mov|.avi|.docx|.doc|.zip|.rar|.wmv|.swf)", _options))
-                                                                .Select(a => a.GetAttributeValue("href", null))
-                                                                .ToHashSet();
-
-                                // turn relative links into absolute ones
-                                if (pageLinks.Count > 0)
+                                foreach (string link in pageLinks)
                                 {
-                                    foreach (string link in pageLinks)
-                                    {
-                                        string fixedLink;
+                                    string fixedLink;
 
-                                        if (!link.StartsWith("http"))
+                                    if (!link.StartsWith("http"))
+                                    {
+                                        if (link.StartsWith("/"))
                                         {
-                                            if (link.StartsWith("/"))
-                                            {
-                                                fixedLink = $"{url.Scheme}://{url.Host}/{link.Substring(1)}";
-                                            }
-                                            else
-                                            {
-                                                fixedLink = $"{url.Scheme}://{url.Host}/{link}";
-                                            }
+                                            fixedLink = $"{url.Scheme}://{url.Host}/{link.Substring(1)}";
                                         }
                                         else
                                         {
-                                            fixedLink = link;
-                                        }
-
-                                        // only keep links within the same domain as baseUrl
-                                        if (!seen.Contains(fixedLink))
-                                        {
-                                            if (url.Host == new Uri(fixedLink).Host)
-                                            {
-                                                // long links usually never have desired info
-                                                if (fixedLink.Length < 100)
-                                                {
-                                                    seen.Add(fixedLink);
-                                                    crawlQ.Enqueue(new Uri(fixedLink));
-
-                                                    lock (_syncLock)
-                                                    {
-                                                        CrawlQueueResults.Add(new CrawlQueueResult() { QueuedUrl = fixedLink });
-                                                    }
-
-                                                    Console.WriteLine("queued", fixedLink);
-                                                }
-                                            }
+                                            fixedLink = $"{url.Scheme}://{url.Host}/{link}";
                                         }
                                     }
-                                    // get the div elements that match the director title regex
-                                    HashSet<string> directorMatches = htmlDoc.DocumentNode
-                                                                          .SelectNodes(".//div")
-                                                                          .Where(s => directorRx.IsMatch(s.InnerText))
-                                                                          .Select(a => a.InnerText.Trim())
-                                                                          .Select(a => Regex.Replace(a, "[ \t\r\n]+", @" ").Trim())
-                                                                          .ToHashSet();
-
-                                    // substrings from the div elements that contain the desired titles
-                                    //HashSet<string> substringMatches = new HashSet<string>();
-
-                                    // go through each match candidate and get 
-                                    // the index of the regex match and grab the words
-                                    // around the match
-                                    if (directorMatches.Count > 0)
+                                    else
                                     {
-                                        foreach (string match in directorMatches)
+                                        fixedLink = link;
+                                    }
+
+                                    // only keep links within the same domain as baseUrl
+                                    if (!seen.Contains(fixedLink))
+                                    {
+                                        if (url.Host == new Uri(fixedLink).Host)
                                         {
-                                            MatchCollection collection = directorRx.Matches(match);
-
-                                            if (collection.Count > 0)
+                                            // long links usually never have desired info
+                                            if (fixedLink.Length < 100)
                                             {
-                                                foreach (Match fragment in collection)
+                                                seen.Add(fixedLink);
+                                                crawlQ.Enqueue(new Uri(fixedLink));
+
+                                                lock (_syncLock)
                                                 {
-
-                                                    try
-                                                    {
-                                                        // have to be careful if match has very few characters
-                                                        // before the match index
-                                                        string substring = (fragment.Index < 41) ? match.Substring(0, 120) : match.Substring(fragment.Index - 30, 120);
-
-                                                        if (string.IsNullOrEmpty(substring))
-                                                        {
-                                                            continue;
-                                                        }
-                                                        else
-                                                        {
-                                                            substringMatches.Add(substring);
-                                                        }
-                                                    }
-                                                    catch (Exception e)
-                                                    {
-                                                        Console.WriteLine($"something happend {e}");
-                                                    }
-
+                                                    CrawlQueueResults.Add(new CrawlQueueResult() { QueuedUrl = fixedLink });
                                                 }
+
+                                                Console.WriteLine("queued", fixedLink);
                                             }
                                         }
                                     }
-
-
-                                    // update the ui
-                                    //foreach (string substring in substringMatches)
-                                    //{
-                                    //    lock (_syncLock)
-                                    //    {
-                                    //        CrawlResults.Add(
-                                    //            new CrawlResult()
-                                    //            {
-                                    //                BaseUrl = url.ToString(),
-                                    //                FoundUrl = currentUrl.ToString(),
-                                    //                Match = substring,
-                                    //                Email = emailRx.Match(substring).ToString(),
-                                    //                Phone = phoneRx.Match(substring).ToString()
-                                    //            }
-                                    //        );
-                                    //    }
-                                    //}
-
-
                                 }
-                                else
+                                // get the div elements that match the director title regex
+                                HashSet<string> directorMatches = htmlDoc.DocumentNode
+                                                                        .SelectNodes(".//div")
+                                                                        .Where(s => directorRx.IsMatch(s.InnerText))
+                                                                        .Select(a => a.InnerText.Trim())
+                                                                        .Select(a => Regex.Replace(a, "[ \t\r\n]+", @" ").Trim())
+                                                                        .ToHashSet();
+
+                                // go through each match candidate and get 
+                                // the index of the regex match and grab the words
+                                // around the match
+                                if (directorMatches.Count > 0)
                                 {
-                                    continue;
-                                }
+                                    foreach (string match in directorMatches)
+                                    {
+                                        MatchCollection collection = directorRx.Matches(match);
 
+                                        if (collection.Count > 0)
+                                        {
+                                            foreach (Match fragment in collection)
+                                            {
+
+                                                try
+                                                {
+                                                    // have to be careful if match has very few characters
+                                                    // before the match index
+                                                    string substring = (fragment.Index < 41) ? match.Substring(0, 120) : match.Substring(fragment.Index - 30, 120);
+
+                                                    if (string.IsNullOrEmpty(substring))
+                                                    {
+                                                        continue;
+                                                    }
+                                                    else
+                                                    {
+                                                        substringMatches.Add(substring);
+                                                    }
+                                                }
+                                                catch (Exception e)
+                                                {
+                                                    Console.WriteLine($"something happend {e}");
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            catch (HttpRequestException e)
+                            else
                             {
-                                Console.WriteLine($"HttpRequestException {e} \n\n");
-                                continue;
-                            }
-                            catch (Exception e)
-                            {
-                                Console.WriteLine($"error occurred: {e} \n\n");
                                 continue;
                             }
                         }
@@ -378,28 +340,19 @@ namespace ExDeathWPF
                         Console.WriteLine($"error {e}");
                         continue;
                     }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine($"error occurred: {e} \n\n");
+                        continue;
+                    }
                 }
             }
 
             Console.WriteLine("Done Crawling");
         }
 
-        // these have to exist here or else WPF gets angry
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void CrawlUrl_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
+        // function to use regex within xpath .//element[contains]
+        // methods but it's not implemented yet
         public static IEnumerable<HtmlNode> SelectNodes(HtmlNodeNavigator navigator, string xpath)
         {
             if (navigator == null)
@@ -421,6 +374,22 @@ namespace ExDeathWPF
                     }
                 }
             }
+        }
+
+        // these have to be here or else WPF gets angry
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void CrawlUrl_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -12,7 +12,7 @@ namespace ExDeath
     public class Sift
     {
         const RegexOptions _options = RegexOptions.Compiled | RegexOptions.IgnoreCase;
-        static string PhoneRegex = @"(?:(?:t(?:ele?(?:phone)?)?|p(hone)?|fa?(?:x|cs(?:im(?:ile)?)?))[\:\.\s]*)?(\+?(?:[0-1]{1}[-.\s])?\(?(?:[0-9]{3})\)?[-. ]?(?:[0-9]{3})[-. ]?(?:[0-9]{4}))";
+        static string PhoneRegex = @"(1 |\+1 )?[ .-]?(\([0-9]{3}\) ?|[0-9]{3} ?)[ .-]?[0-9]{3}[ .-][0-9]{4}[ ]?(( |x|ext|ext.|extension|#){1}[ ]?([0-9]){1,7}){0,1}";
         static string EmailRegex = @"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
         static string AddressRegex = @"(([0-9]{1,6}|One|Two|Three) .* [0-9]{5}([- ][0-9]{4})?|[0-9]{1,5} .* [A-Za-z]{2})|([0-9]{1,4} .* Suite [0-9]+)|(((([P|p][.]?[ ]?[O|o][.]?[ ]?)([B|b][O|o][X|x])?)|(Post Office Box)|([B|b)][O|o][X|x])) .* ([0-9]{5}([- ][0-9]{4})?|[A-Za-z]{2})?)|(([0-9]{1,5}|[0-9]{1}[A-Z]{1}[A-Z]{1}|[A-Z]{1}[0-9]{1}[A-Z]{1}) .* (Canada|United Kingdom|Papua New Guinea|United States|Norway|France))|((London|Canada) ([0-9]{1,5}|[0-9]{1}[A-Z]{1}[A-Z]{1}|[A-Z]{1}[0-9]{1}[A-Z]{1}))|([0-9]{1,5}.* [0-9]{5})";
         static string HtmlRegex = @"<(.|\n)*?>";
