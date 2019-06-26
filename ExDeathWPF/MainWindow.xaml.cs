@@ -34,11 +34,16 @@ namespace ExDeathWPF
 
         // regex options
         private const RegexOptions _options = RegexOptions.Compiled | RegexOptions.IgnoreCase;
+
+        // these were for a client i did work for
+        // ill clean this up eventually
         Regex linkRx = new Regex(@"\S*(directory|district|administration|administrative|administrator|administrators|staff|curriculum|guidance|counseling|instruction|board|education|BOE|contact|contacts)|(our (district|administration|staff))|(curriculum (&|and|&amp;) instruction)|((assistant) (superintendent))|(chief academic officer)|(CAO)|(C&I)|(C & I)|(Chief Academic Officer)|((central|main) (office|administration))|(staff directory)", _options);
         Regex directorRx = new Regex(@"(((director|supervisor|superintendent) (of|for) curriculum (&|and|&amp;) instruction)|(curriculum (development|director|supervisor|coordinator)))|((supervisor|director|superintendent) (of|for) (curriculum|instruction))|(curriculum (&|and|&amp;) instruction)|((of|for) (curriculum|instruction))|(assistant superintendent)|(chief academic officer)|(CAO)|(C&I)|(C & I)+", _options);
         Regex emailRx = new Regex(@"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", _options);
         Regex phoneRx = new Regex(@"(1 |\+1 )?[ .-]?(\([0-9]{3}\) ?|[0-9]{3} ?)[ .-]?[0-9]{3}[ .-][0-9]{4}[ ]?(( |x|ext|ext.|extension|#){1}[ ]?([0-9]){1,7}){0,1}", _options);
 
+        // ignore links that contain these extensions
+        Regex extRx = new Regex(@"(.pdf|.ppt|.mp4|.mp3|.mov|.avi|.docx|.doc|.zip|.rar|.wmv|.swf)", _options);
 
         // search results from search tab
         public ObservableCollection<SearchResult> SearchResults { get; private set; }
@@ -216,7 +221,7 @@ namespace ExDeathWPF
                             HashSet<string> pageLinks = htmlDoc.DocumentNode
                                                             .Descendants("a")
                                                             .Where(a => linkRx.IsMatch(a.InnerText))
-                                                            .Where(a => !Regex.IsMatch(a.Attributes["href"].Value, "(.pdf|.ppt|.mp4|.mp3|.mov|.avi|.docx|.doc|.zip|.rar|.wmv|.swf)", _options))
+                                                            .Where(a => !extRx.IsMatch(a.Attributes["href"].Value))
                                                             .Select(a => a.GetAttributeValue("href", null))
                                                             .ToHashSet();
 

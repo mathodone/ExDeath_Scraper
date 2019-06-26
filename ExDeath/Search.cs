@@ -22,26 +22,24 @@ namespace ExDeath
         // gets links from first page of results
         public async Task<List<string>> SearchBing(string term)
         {
-            using (var response = await client.GetAsync($"https://www.bing.com/search?q={term.Replace(' ', '+')}"))
+            var response = await client.GetAsync($"https://www.bing.com/search?q={term.Replace(' ', '+')}");
+            response.EnsureSuccessStatusCode();
+            var source = await response.Content.ReadAsStringAsync();
+
+            HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
+            htmlDoc.LoadHtml(source);
+
+            try
             {
-                response.EnsureSuccessStatusCode();
-                var source = await response.Content.ReadAsStringAsync();
-
-                HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlDocument();
-                htmlDoc.LoadHtml(source);
-
-                try
-                {
-                    List<string> resultsLinks = htmlDoc.DocumentNode
-                                                       .SelectNodes("//li[@class='b_algo']/h2/a ")
-                                                       .Select(a => a.Attributes["href"].Value)
-                                                       .ToList();
-                    return resultsLinks;
-                }
-                catch
-                {
-                    return new List<string>() { "none" };
-                }
+                List<string> resultsLinks = htmlDoc.DocumentNode
+                                                    .SelectNodes("//li[@class='b_algo']/h2/a ")
+                                                    .Select(a => a.Attributes["href"].Value)
+                                                    .ToList();
+                return resultsLinks;
+            }
+            catch
+            {
+                return new List<string>() { "none" };
             }
         }
     }
